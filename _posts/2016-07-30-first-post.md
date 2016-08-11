@@ -13,7 +13,7 @@ image:
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
 
 # Mathjax [^1]
-LaTeX math delimiters: `\\(a^2 + b^2 = c^2\\)` or `$a^2 + b^2 = c^2$` for inline math \$a^2 + b^2 = c^2$; and `\\[a^2 + b^2 = c^2\\]` for displayed equations \\[a^2 + b^2 = c^2\\].
+LaTeX math delimiters: `\\(a^2 + b^2 = c^2\\)` or `$a^2 + b^2 = c^2$` for inline math \$a^2 + b^2 = c^2$; and `\\[a^2 + b^2 = c^2\\]` for displayed equations \\[a^2 + b^2 = c^2\\]. 
 
 [^1]: <https://mikelove.wordpress.com/2015/07/01/how-to-use-latex-math-in-rmd-to-display-properly-on-github-pages/>
 
