@@ -12,7 +12,9 @@ image:
 
 ### 1. Install Sublime Text plugin [randy3k/R-box](https://github.com/randy3k/R-Box)
 
-### 2. Create my own `sublime-build` for R markdown files
+### 2 Windows
+
+#### 2.1. Create my own `sublime-build` for R markdown files
 
 The default build system of R-box doesn't work, and get the error
 
@@ -35,7 +37,7 @@ This issue can be resolved by regular expression replacement [^1]
 }
 ```
 
-### 3. Apply fix for pandoc 1.4 [^2]
+#### 2.2. Apply fix for pandoc 1.4 [^2]
 
 To support latex in R markdown document, I added to the file ...\Anaconda3\R\library\rmarkdown\rmd\latex\default.tex:
 
@@ -44,6 +46,13 @@ To support latex in R markdown document, I added to the file ...\Anaconda3\R\lib
     \providecommand{\tightlist}{
       \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 ```
+
+### 3. Mac
+The default `R markdown` build system gets the error
+
+    str expected, not list
+
+it is because the PATH variable used by sublime text3 is `/usr/bin:/bin:/usr/sbin:/sbin` while my TexLive is installed at `/usr/local/texlive/2016/bin/x86_64-darwin`. This can be hacked by editing the PATH variable of sublime text3, described in the post [Hacking the PATH variable in Sublime Text](http://robdodson.me/hacking-the-path-variable-in-sublime-text/)
 
 [^1]: <http://stackoverflow.com/questions/20752890/error-in-custom-sublime-build-for-knitr-markdown/>
 [^2]: <https://github.com/tompollard/markdown-cv/issues/1/>
