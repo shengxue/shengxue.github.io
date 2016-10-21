@@ -4,10 +4,6 @@ title: Exercise 1- Linear Regression
 description: Exercise 1 of the standord Corsera course Machine learning
 modified: 2016-10-17
 tags: [Machine learning, Stanford, Assignment]
-image:
-  feature: norway-483185_1920.jpg
-  credit: pixabay
-  creditlink: https://pixabay.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 # 1. Sublime Text3 Octave build system
 ```json

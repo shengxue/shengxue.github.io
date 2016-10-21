@@ -4,10 +4,6 @@ title: R markdown in Sublime Text3
 description: Support R markdown in Sublime Text3
 modified: 2016-08-11
 tags: [R markdown, Sublime Text, Latex]
-image:
-  feature: norway-483185_1920.jpg
-  credit: pixabay
-  creditlink: https://pixabay.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
 ### 1. Install Sublime Text plugin [randy3k/R-box](https://github.com/randy3k/R-Box)
