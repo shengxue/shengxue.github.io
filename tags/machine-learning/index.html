@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Machine Learning &#8211; Runner</title>
+<meta name="description" content="">
+
+    
+
+
+
+
+
+<meta name="twitter:title" content="Machine Learning">
+<meta name="twitter:description" content="Time and pressure ...">
+
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Machine Learning">
+<meta property="og:description" content="Time and pressure ...">
+<meta property="og:url" content="/tags/machine-learning/">
+<meta property="og:site_name" content="Runner">
+
+
+
+  <meta property="og:updated_time" content="2016-11-07T00:00:00&#43;00:00"/>
+
+
+
+<link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/monokai-sublime.min.css" rel="stylesheet">
+
+
+
+
+<link rel="canonical" href="/tags/machine-learning/">
+
+  <link href="/tags/machine-learning/index.xml" rel="alternate" type="application/rss+xml" title="Runner" />
+  <link href="/tags/machine-learning/index.xml" rel="feed" type="application/rss+xml" title="Runner" />
+
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<meta name="generator" content="Hugo 0.31.1" />
+
+<script src="/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+
+<link rel="shortcut icon" href="/favicon.png">
+
+
+</head>
+
+<body id="post-index" >
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation" style="display:inline-block">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+		<li><a href="/">Home</a></li>
+		<li>
+			<a href="#">About</a>
+			<ul class="dl-submenu">
+			
+				<li>
+					
+					<img src="/images/shengxue.jpg" alt="Sheng Xue's photo" class="author-photo">
+					
+					<h4>Sheng Xue</h4>
+					<p>Working as C&#43;&#43;/C# developer, while actively learning node.js/AngularJs/Data Science/Machine Learning</p>
+				</li>
+				<li><a href="/about/"><span class="btn btn-inverse">Learn More</span></a></li>
+				
+				
+				
+				
+				
+				<li>
+					<a href="https://github.com/shengxue/shengxue.github.io"><i class="fa fa-fw fa-github"></i> GitHub</a>
+				</li>
+				
+				
+				
+				
+			
+			</ul>
+		</li>
+		<li>
+			<a href="#">Posts</a>
+			<ul class="dl-submenu">
+				<li><a href="/posts/">All Posts</a></li>
+				<li><a href="/tags/">All Tags</a></li>
+			</ul>
+		</li>
+		
+	    <li><a href="/theme-setup/" >Theme Setup</a></li>
+	  
+	    <li><a href="http://mademistakes.com" target="_blank">External Link</a></li>
+	  
+	</ul>
+</nav>
+
+<div class="entry-header">
+  
+  <div class="header-title">
+    <div class="header-title-wrap">
+		<h1><a href="/" title="Go to the homepage">Runner</a></h1>
+	  <h2>
+            
+            
+              Machine Learning
+            
+          </h2>
+    </div>
+  </div>
+</div>
+
+<div id="main" role="main">
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+         
+		<span class="entry-date date published updated"><time datetime="2016-11-07 00:00:00 &#43;0000 UTC"><a href="/posts/2016-11-07-exercise4-neural-network-learning/">Nov 7, 2016</a></time></span>
+        
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        Reading time ~1 minute
+      </span>
+    </div>
+    
+	<h1 class="entry-title"><a href="/posts/2016-11-07-exercise4-neural-network-learning/" rel="bookmark" title="Exercise 4 - Neural Network Learning" itemprop="url">Exercise 4 - Neural Network Learning</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <div id="neural-networks" class="section level1">
+<h1>1. Neural Networks</h1>
+<div id="feedforward-and-const-function" class="section level2">
+<h2>Feedforward and const function</h2>
+<p>The cost function for the neural network (without regularization) is</p>
+<p><span class="math display">\[
+J(\theta) = \frac{1}{m}\sum_{i=1}^m\sum_{k=1}^K
+\bigg[
+−y_k^{(i)}\log((h_{θ}(x^{(i)}))_k)−(1−y_k^{(i)})\log(1−(h_θ(x^{(i)}))_k)
+\bigg]
+\]</span>,</p>
+<p>where <span class="math inline">\(h_{\theta}(x^{(i)})\)</span> is computed as shown in the Figure 2 and <span class="math inline">\(K = 10\)</span> is the total number of possible labels. Note that <span class="math inline">\(h_θ(x^{(i)})_k = a^{(3)}_k\)</span> is the activation (output value) of the <span class="math inline">\(k\)</span>-th output unit.</p>
+<p><strong>Implementation-nnCostFunction.m</strong></p>
+<pre class="m"><code>a1 = [ones(m, 1) X];
+z2 = a1*Theta1&#39;;
+a2 = [ones(size(z2, 1), 1) sigmoid(z2)];
+z3 = a2*Theta2&#39;;
+a3 = sigmoid(z3);
+
+yd = eye(num_labels);
+y = yd(y,:);
+
+log_dif = -log(a3).*y-log(1-a3).*(1-y);
+J=sum(log_dif(:))/m;
+</code></pre>
+</div>
+<div id="regularized-const-function" class="section level2">
+<h2>Regularized const function</h2>
+<p>The cost function for neural networks with regularization is given by</p>
+<p><span class="math display">\[
+J(\theta) = \frac{1}{m}\sum_{i=1}^m\sum_{k=1}^K
+\bigg[
+−y_k^{(i)}\log((h_{θ}(x^{(i)}))_k)−(1−y_k^{(i)})\log(1−(h_θ(x^{(i)}))_k)
+\bigg]
+\]</span></p>
+<p><span class="math display">\[
++ \frac{\lambda}{2m}\bigg[\sum_{j=1}^{25}\sum_{k=1}^{400}(\theta_{j,k}^{(1)})^2+\sum_{j=1}^{10}\sum_{k=1}^{25}(\theta_{j,k}^{(2)})^2\bigg]
+\]</span></p>
+<p><strong>Implementation-nnCostFunction.m</strong></p>
+<pre class="m"><code>a1 = [ones(m, 1) X];
+z2 = a1*Theta1&#39;;
+a2 = [ones(size(z2, 1), 1) sigmoid(z2)];
+z3 = a2*Theta2&#39;;
+a3 = sigmoid(z3);
+
+yd = eye(num_labels);
+y = yd(y,:);
+
+log_dif = -log(a3).*y-log(1-a3).*(1-y);
+
+Theta1s=Theta1(:,2:end);
+Theta2s=Theta2(:,2:end);
+
+penalty = lambda/(2*m)*(sum((Theta1s.*Theta1s)(:)) + sum((Theta2s.*Theta2s)(:)));
+J=sum(log_dif(:))/m + penalty;</code></pre>
+</div>
+</div>
+<div id="backpropagation" class="section level1">
+<h1>2. Backpropagation</h1>
+<div id="section" class="section level2">
+<h2></h2>
+</div>
+</div>
+
+  </div>
+</article>
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+         
+		<span class="entry-date date published updated"><time datetime="2016-10-23 00:00:00 &#43;0000 UTC"><a href="/posts/2016-10-23-exercise3-multi-class-classification/">Oct 23, 2016</a></time></span>
+        
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        Reading time ~3 minutes
+      </span>
+    </div>
+    
+	<h1 class="entry-title"><a href="/posts/2016-10-23-exercise3-multi-class-classification/" rel="bookmark" title="Exercise 3 - Multi-class Classification" itemprop="url">Exercise 3 - Multi-class Classification</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>Cost function, gradient of regularized logistic regression for multi-class classification are similar to exercise 2.</p>
+<p>This exercise implement one-vs-all classification by training multiple regularized logistic regression classifiers, one for each of the K classes in our dataset.</p>
+<p><strong>oneVsAll.m</strong></p>
+<pre class="m"><code>function [all_theta] = oneVsAll(X, y, num_labels, lambda)
+%ONEVSALL trains multiple logistic regression classifiers and returns all
+%the classifiers in a matrix all_theta, where the i-th row of all_theta 
+%corresponds to the classifier for label i
+%   [all_theta] = ONEVSALL(X, y, num_labels, lambda) trains num_labels
+%   logisitc regression classifiers and returns each of these classifiers
+%   in a matrix all_theta, where the i-th row of all_theta corresponds 
+%   to the classifier for label i
+
+% Some useful variables
+m = size(X, 1);
+n = size(X, 2);
+
+% You need to return the following variables correctly 
+all_theta = zeros(num_labels, n + 1);
+
+% Add ones to the X data matrix
+X = [ones(m, 1) X];
+
+% ====================== YOUR CODE HERE ======================
+% Instructions: You should complete the following code to train num_labels
+%               logistic regression classifiers with regularization
+%               parameter lambda. 
+%
+% Hint: theta(:) will return a column vector.
+%
+% Hint: You can use y == c to obtain a vector of 1&#39;s and 0&#39;s that tell use 
+%       whether the ground truth is true/false for this class.
+%
+% Note: For this assignment, we recommend using fmincg to optimize the cost
+%       function. It is okay to use a for-loop (for c = 1:num_labels) to
+%       loop over the different classes.
+%
+%       fmincg works similarly to fminunc, but is more efficient when we
+%       are dealing with large number of parameters.
+%
+% Example Code for fmincg:
+%
+%     % Set Initial theta
+%     initial_theta = zeros(n + 1, 1);
+%     
+%     % Set options for fminunc
+%     options = optimset(&#39;GradObj&#39;, &#39;on&#39;, &#39;MaxIter&#39;, 50);
+% 
+%     % Run fmincg to obtain the optimal theta
+%     % This function will return theta and the cost 
+%     [theta] = ...
+%         fmincg (@(t)(lrCostFunction(t, X, (y == c), lambda)), ...
+%                 initial_theta, options);
+%
+
+for i = 1:num_labels
+    initial_theta = zeros(n+1, 1);
+    options = optimset(&#39;GradObj&#39;, &#39;on&#39;, &#39;MaxIter&#39;, 50);
+    [theta] = fmincg(@(t)(lrCostFunction(t, X, (y == i), lambda)), ...
+        initial_theta, options);
+    all_theta(i,:) = theta&#39;;
+end
+
+% =========================================================================
+
+end
+</code></pre>
+<p><strong>predictOneVsAll.m</strong></p>
+<pre class="m"><code>function p = predictOneVsAll(all_theta, X)
+%PREDICT Predict the label for a trained one-vs-all classifier. The labels 
+%are in the range 1..K, where K = size(all_theta, 1). 
+%  p = PREDICTONEVSALL(all_theta, X) will return a vector of predictions
+%  for each example in the matrix X. Note that X contains the examples in
+%  rows. all_theta is a matrix where the i-th row is a trained logistic
+%  regression theta vector for the i-th class. You should set p to a vector
+%  of values from 1..K (e.g., p = [1; 3; 1; 2] predicts classes 1, 3, 1, 2
+%  for 4 examples) 
+
+m = size(X, 1);
+num_labels = size(all_theta, 1);
+
+% You need to return the following variables correctly 
+p = zeros(size(X, 1), 1);
+
+% Add ones to the X data matrix
+X = [ones(m, 1) X];
+
+% ====================== YOUR CODE HERE ======================
+% Instructions: Complete the following code to make predictions using
+%               your learned logistic regression parameters (one-vs-all).
+%               You should set p to a vector of predictions (from 1 to
+%               num_labels).
+%
+% Hint: This code can be done all vectorized using the max function.
+%       In particular, the max function can also return the index of the 
+%       max element, for more information see &#39;help max&#39;. If your examples 
+%       are in rows, then, you can use max(A, [], 2) to obtain the max 
+%       for each row.
+%       
+
+all_ps = sigmoid(X*all_theta&#39;);
+[p_max,i_max] = max(all_ps, [], 2);
+p = i_max;
+
+% =========================================================================
+
+end</code></pre>
+
+  </div>
+</article>
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+         
+		<span class="entry-date date published updated"><time datetime="2016-10-23 00:00:00 &#43;0000 UTC"><a href="/posts/2016-10-23-exercise3-neural-networks/">Oct 23, 2016</a></time></span>
+        
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        Reading time ~1 minute
+      </span>
+    </div>
+    
+	<h1 class="entry-title"><a href="/posts/2016-10-23-exercise3-neural-networks/" rel="bookmark" title="Exercise 3 - Neural Networks" itemprop="url">Exercise 3 - Neural Networks</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>Logistic regression cannot form more complex hypotheses as it is only a linear classifier<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>You could add more features (such as polynomial features) to logistic regression, but that can be very expensive to train.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+
+  </div>
+</article>
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+         
+		<span class="entry-date date published updated"><time datetime="2016-10-19 00:00:00 &#43;0000 UTC"><a href="/posts/2016-10-19-exercise2-logistic-regression/">Oct 19, 2016</a></time></span>
+        
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        Reading time ~6 minutes
+      </span>
+    </div>
+    
+	<h1 class="entry-title"><a href="/posts/2016-10-19-exercise2-logistic-regression/" rel="bookmark" title="Exercise 2 - Logistic Regression (1)" itemprop="url">Exercise 2 - Logistic Regression (1)</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <div id="logistic-regression" class="section level1">
+<h1>1 Logistic Regression</h1>
+<div id="visualizing-data" class="section level2">
+<h2>1.1 Visualizing data</h2>
+<div id="plotdata.m" class="section level3">
+<h3>plotdata.m</h3>
+<pre class="m"><code>function plotData(X, y)
+%PLOTDATA Plots the data points X and y into a new figure 
+%   PLOTDATA(x,y) plots the data points with + for the positive examples
+%   and o for the negative examples. X is assumed to be a Mx2 matrix.
+
+% Create New Figure
+figure; hold on;
+
+% ====================== YOUR CODE HERE ======================
+% Instructions: Plot the positive and negative examples on a
+%               2D plot, using the option &#39;k+&#39; for the positive
+%               examples and &#39;ko&#39; for the negative examples.
+%
+
+
+% Find Indices of Positive and Negative Examples
+pos = find(y==1); neg = find(y == 0);
+% Plot Examples
+plot(X(pos, 1), X(pos, 2), &#39;k+&#39;,&#39;LineWidth&#39;, 2, &#39;MarkerSize&#39;, 7);
+plot(X(neg, 1), X(neg, 2), &#39;ko&#39;, &#39;MarkerFaceColor&#39;, &#39;y&#39;, ...
+    &#39;MarkerSize&#39;, 7);
+
+% =========================================================================
+
+hold off;
+
+end</code></pre>
+</div>
+</div>
+<div id="sigmoid-function" class="section level2">
+<h2>1.2 Sigmoid function</h2>
+<p>Logistic regression hypothesis is defined as: <span class="math display">\[h_\theta(x) = g(\theta^Tx)\]</span>, where function <span class="math inline">\(g\)</span> is the sigmoid function. The sigmoid function is defined as: <span class="math display">\[g(z) = \frac{1}{1 + e^{-z}}\]</span></p>
+<div id="sigmoid.m" class="section level3">
+<h3>Sigmoid.m</h3>
+<pre class="m"><code>function g = sigmoid(z)
+%SIGMOID Compute sigmoid functoon
+%   J = SIGMOID(z) computes the sigmoid of z.
+
+% You need to return the following variables correctly 
+g = zeros(size(z));
+
+% ====================== YOUR CODE HERE ======================
+% Instructions: Compute the sigmoid of each value of z (z can be a matrix,
+%               vector or scalar).
+
+g = 1./(1 .+ exp(-1*z) );
+
+% =============================================================
+
+end</code></pre>
+</div>
+</div>
+<div id="cost-function-and-gradient" class="section level2">
+<h2>1.3 Cost function and gradient</h2>
+<p>The cost function in logistic regression is <span class="math display">\[J(\theta) = \frac{1}{m}\sum_{i=1}^m[−y^{(i)}\log(h_\theta(x^{(i)})) − (1 − y^{(i)})\log(1 − h_\theta(x^{(i)}))]\]</span>, and the gradient of the cost is a vector of the same length as <span class="math inline">\(\theta\)</span> where the <span class="math inline">\(j\)</span>th element (for j = 0, 1, . . . , n) is defined as follows: <span class="math display">\[\frac{\partial J(\theta) }{\partial \theta_j } = \frac{1}{m}\sum_{i=1}^m \bigg(h_\theta(x^{(i)}) − y^{(i)}\bigg)x_j^{(i)}\]</span></p>
+<div id="constfunction.m" class="section level3">
+<h3>constFunction.m</h3>
+<pre class="m"><code>function [J, grad] = costFunction(theta, X, y)
+%COSTFUNCTION Compute cost and gradient for logistic regression
+%   J = COSTFUNCTION(theta, X, y) computes the cost of using theta as the
+%   parameter for logistic regression and the gradient of the cost
+%   w.r.t. to the parameters.
+
+% Initialize some useful values
+m = length(y); % number of training examples
+
+% You need to return the following variables correctly 
+J = 0;
+grad = zeros(size(theta));
+
+% ====================== YOUR CODE HERE ======================
+% Instructions: Compute the cost of a particular choice of theta.
+%               You should set J to the cost.
+%               Compute the partial derivatives and set grad to the partial
+%               derivatives of the cost w.r.t. each parameter in theta
+%
+% Note: grad should have the same dimensions as theta
+%
+
+h = sigmoid(X*theta);
+J=(-y&#39;*log(h) - (1-y)&#39;*log(1.-h))/m;
+grad = X&#39;*(h-y)/m;
+
+
+% =============================================================
+
+end</code></pre>
+</div>
+</div>
+<div id="learning-parameters-using-fminunc" class="section level2">
+<h2>1.4 Learning parameters using fminunc</h2>
+<p>Octave/MATLAB’s fminunc is an optimization solver that finds the minimum of an unconstrained function. For logistic regression, you want to optimize the cost function <span class="math inline">\(J(\theta)\)</span> with parameters <span class="math inline">\(\theta\)</span>.</p>
+<pre class="m"><code>%% ============= Part 3: Optimizing using fminunc  =============
+%  In this exercise, you will use a built-in function (fminunc) to find the
+%  optimal parameters theta.
+
+%  Set options for fminunc
+options = optimset(&#39;GradObj&#39;, &#39;on&#39;, &#39;MaxIter&#39;, 400);
+
+%  Run fminunc to obtain the optimal theta
+%  This function will return theta and the cost 
+[theta, cost] = ...
+    fminunc(@(t)(costFunction(t, X, y)), initial_theta, options);</code></pre>
+</div>
+<div id="decision-boundary" class="section level2">
+<h2>1.5 Decision boundary</h2>
+<p>This final <span class="math inline">\(\theta\)</span> value computed from <strong>fminunc</strong> will then be used to plot the decision boundary on the training data.</p>
+<p><span class="math inline">\(y\)</span> value on the decision boundary satifies: <span class="math display">\[y = h_\theta(x) = g\bigg(\theta^Tx\bigg) = 0.5 \]</span>, that is, <span class="math display">\[\theta^Tx = 0 \]</span></p>
+<ul>
+<li><p>When training data X has two features <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, <span class="math display">\[\theta_1 + \theta_2 * x_1 + \theta_3*x_2 = 0 \]</span>, that is, <span class="math display">\[x_2 = -\frac{\theta_1 + \theta_2 * x_1}{\theta_3} \]</span>,</p></li>
+<li><p>When training data X has more than 2 features, how to visualize it on 2D plot?</p></li>
+</ul>
+<div id="plotdecisionboundary.m" class="section level3">
+<h3>plotDecisionBoundary.m</h3>
+<pre class="m"><code>function plotDecisionBoundary(theta, X, y)
+%PLOTDECISIONBOUNDARY Plots the data points X and y into a new figure with
+%the decision boundary defined by theta
+%   PLOTDECISIONBOUNDARY(theta, X,y) plots the data points with + for the 
+%   positive examples and o for the negative examples. X is assumed to be 
+%   a either 
+%   1) Mx3 matrix, where the first column is an all-ones column for the 
+%      intercept.
+%   2) MxN, N&gt;3 matrix, where the first column is all-ones
+
+% Plot Data
+plotData(X(:,2:3), y);
+hold on
+
+if size(X, 2) &lt;= 3
+    % Only need 2 points to define a line, so choose two endpoints
+    plot_x = [min(X(:,2))-2,  max(X(:,2))+2];
+
+    % Calculate the decision boundary line
+    plot_y = (-1./theta(3)).*(theta(2).*plot_x + theta(1));
+
+    % Plot, and adjust axes for better viewing
+    plot(plot_x, plot_y)
+    
+    % Legend, specific for the exercise
+    legend(&#39;Admitted&#39;, &#39;Not admitted&#39;, &#39;Decision Boundary&#39;)
+    axis([30, 100, 30, 100])
+else
+    % Here is the grid range
+    u = linspace(-1, 1.5, 50);
+    v = linspace(-1, 1.5, 50);
+
+    z = zeros(length(u), length(v));
+    % Evaluate z = theta*x over the grid
+    for i = 1:length(u)
+        for j = 1:length(v)
+            z(i,j) = mapFeature(u(i), v(j))*theta;
+        end
+    end
+    z = z&#39;; % important to transpose z before calling contour
+
+    % Plot z = 0
+    % Notice you need to specify the range [0, 0]
+    contour(u, v, z, [0, 0], &#39;LineWidth&#39;, 2)
+end
+hold off
+
+end
+</code></pre>
+</div>
+<div id="mapfeature.m" class="section level3">
+<h3>mapFeature.m</h3>
+<pre class="m"><code>function out = mapFeature(X1, X2)
+% MAPFEATURE Feature mapping function to polynomial features
+%
+%   MAPFEATURE(X1, X2) maps the two input features
+%   to quadratic features used in the regularization exercise.
+%
+%   Returns a new feature array with more features, comprising of 
+%   X1, X2, X1.^2, X2.^2, X1*X2, X1*X2.^2, etc..
+%
+%   Inputs X1, X2 must be the same size
+%
+
+degree = 6;
+out = ones(size(X1(:,1)));
+for i = 1:degree
+    for j = 0:i
+        out(:, end+1) = (X1.^(i-j)).*(X2.^j);
+    end
+end
+
+end</code></pre>
+</div>
+</div>
+<div id="evaluating-logistic-regression" class="section level2">
+<h2>1.6 Evaluating logistic regression</h2>
+<div id="predict.m" class="section level3">
+<h3>predict.m</h3>
+<pre class="m"><code>function p = predict(theta, X)
+%PREDICT Predict whether the label is 0 or 1 using learned logistic 
+%regression parameters theta
+%   p = PREDICT(theta, X) computes the predictions for X using a 
+%   threshold at 0.5 (i.e., if sigmoid(theta&#39;*x) &gt;= 0.5, predict 1)
+
+m = size(X, 1); % Number of training examples
+
+% You need to return the following variables correctly
+p = zeros(m, 1);
+
+% ====================== YOUR CODE HERE ======================
+% Instructions: Complete the following code to make predictions using
+%               your learned logistic regression parameters. 
+%               You should set p to a vector of 0&#39;s and 1&#39;s
+%
+
+p = sigmoid(X, theta)&gt;=0.5;
+
+% =========================================================================
+
+end</code></pre>
+<pre class="m"><code>%  Predict probability for a student with score 45 on exam 1 
+%  and score 85 on exam 2 
+
+prob = sigmoid([1 45 85] * theta);
+fprintf([&#39;For a student with scores 45 and 85, we predict an admission &#39; ...
+         &#39;probability of %f\n\n&#39;], prob);
+
+% Compute accuracy on our training set
+p = predict(theta, X);
+
+fprintf(&#39;Train Accuracy: %f\n&#39;, mean(double(p == y)) * 100);</code></pre>
+</div>
+</div>
+</div>
+
+  </div>
+</article>
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+         
+		<span class="entry-date date published updated"><time datetime="2016-10-19 00:00:00 &#43;0000 UTC"><a href="/posts/2016-10-21-exercise2-regularized-logistic-regression/">Oct 19, 2016</a></time></span>
+        
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        Reading time ~2 minutes
+      </span>
+    </div>
+    
+	<h1 class="entry-title"><a href="/posts/2016-10-21-exercise2-regularized-logistic-regression/" rel="bookmark" title="Exercise 2 - Logistic Regression (2)" itemprop="url">Exercise 2 - Logistic Regression (2)</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <div id="regularized-logistic-regression" class="section level1">
+<h1>2 Regularized Logistic Regression</h1>
+<div id="visualizing-the-data" class="section level2">
+<h2>2.1 Visualizing the data</h2>
+<p><img src="/images/exercise2-2.png" alt="Data Image" /> {: .image-center} Figure shows that our dataset cannot be separated into positive and negative examples by a straight-line through the plot. Therefore, a straightforward application of logistic regression will not perform well on this dataset since logistic regression will only be able to find a linear decision boundary.</p>
+</div>
+<div id="feature-mapping" class="section level2">
+<h2>2.2 Feature mapping</h2>
+<p>One way to fit the data better is to create more features from each data point. In the provided function <strong>mapFeature.m</strong>, we will map the features into all polynomial terms of <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> up to the sixth power. <span class="math display">\[
+feature(x) = \begin{bmatrix} \\\ 1 \\\ x_1 \\\ x_2 \\\ x_1^2  \\\ x_1x_2 \\\ x_2^2 \\\ x1^3 \\\ . \\\ . \\\ . \\\ x_1x_2^5 \\\ x_2^6
+                \end{bmatrix}
+\]</span></p>
+</div>
+<div id="cost-function-and-gradient" class="section level2">
+<h2>2.3 Cost function and gradient</h2>
+<p>The regularized cost function in logistic regression is <span class="math display">\[J(\theta) = \frac{1}{m}\sum_{i=1}^m[−y^{(i)}\log(h_\theta(x^{(i)})) − (1 − y^{(i)})\log(1 − h_\theta(x^{(i)}))] + \frac{\lambda}{2m}\sum_{j=1}^n\theta_j^2\]</span></p>
+<p>The gradient of the cost function is a vector where the <span class="math inline">\(j\)</span>th element is defined as follows:</p>
+<p><span class="math display">\[
+\begin{array}{lr}
+\frac{\partial J(\theta)}{\partial \theta_0} = \frac{1}{m}\sum_{i=1}^m\bigg(h_\theta(x^{(i)}) − y^{(i)}\bigg)x_j^{(i)} &amp; \text{for }j = 0 \\\
+\frac{\partial J(\theta)}{\partial \theta_j} = \frac{1}{m}\sum_{i=1}^m\bigg(h_\theta(x^{(i)}) − y^{(i)}\bigg)x_j^{(i)} + \frac{\lambda}{m}\theta_j &amp; \text{for }j \geq 1
+\end{array}
+\]</span></p>
+<p><strong>costFunctionReg.m</strong></p>
+<pre class="m"><code>function [J, grad] = costFunctionReg(theta, X, y, lambda)
+%COSTFUNCTIONREG Compute cost and gradient for logistic regression with regularization
+%   J = COSTFUNCTIONREG(theta, X, y, lambda) computes the cost of using
+%   theta as the parameter for regularized logistic regression and the
+%   gradient of the cost w.r.t. to the parameters. 
+
+% Initialize some useful values
+m = length(y); % number of training examples
+
+% You need to return the following variables correctly 
+J = 0;
+grad = zeros(size(theta));
+
+% ====================== YOUR CODE HERE ======================
+% Instructions: Compute the cost of a particular choice of theta.
+%               You should set J to the cost.
+%               Compute the partial derivatives and set grad to the partial
+%               derivatives of the cost w.r.t. each parameter in theta
+
+
+n = size(theta);
+h = sigmoid(X*theta);
+
+theta1 = [0 ; theta(2:n)];
+p = lambda*(theta1&#39;*theta1)/(2*m);
+
+J=(-y&#39;*log(h) - (1-y)&#39;*log(1-h))/m + p;
+
+grad = X&#39;*(h-y)/m + lambda*theta1/m;
+% =============================================================
+
+end</code></pre>
+<div id="learning-parameters-using-fiminunc" class="section level3">
+<h3>2.3.1 Learning parameters using fiminunc</h3>
+</div>
+</div>
+<div id="plotting-the-decision-boundary" class="section level2">
+<h2>2.4 Plotting the decision boundary</h2>
+<p><strong>plotDecisionBoundary.m</strong></p>
+</div>
+</div>
+
+  </div>
+</article>
+
+
+
+
+<div class="pagination">
+  <ul class="inline-list">
+	  
+    
+
+	
+
+	
+	
+    
+	<li><strong class="current-page">1</strong></li>
+    
+	
+    
+	<li><a href="/tags/machine-learning/page/2/">2</a></li>
+    
+	
+
+	
+
+	
+    
+      <li><a href="/tags/machine-learning/page/2/" class="btn">Next</a></li>
+    
+  </ul>
+</div>
+
+
+</div>
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span> Powered by <a href="https://gohugo.io/" rel="nofollow">Hugo</a> using the <a href="https://github.com/dldx/hpstr-hugo-theme" rel="nofollow">HPSTR</a> theme.</span>
+
+    <script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+
+<script>
+hljs.configure({languages: []});
+hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+  </footer>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="\/js\/vendor\/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/js/scripts.min.js"></script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-111479944-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+</body>
+</html>
+

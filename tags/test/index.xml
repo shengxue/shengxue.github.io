@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Test on Runner</title>
+    <link>/tags/test/</link>
+    <description>Recent content in Test on Runner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 30 Jul 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First Post</title>
+      <link>/posts/2016-07-30-first-post/</link>
+      <pubDate>Sat, 30 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2016-07-30-first-post/</guid>
+      <description>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
+Mathjax 1LaTeX math delimiters: \\(a^2 + b^2 = c^2\\) or “\(a^2 + b^2 = c^2\)” for inline math \(a^2 + b^2 = c^2\); and \\[a^2 + b^2 = c^2\\] for displayed equations \[a^2 + b^2 = c^2\].
+Heading 1Heading 2Heading 3Heading 4Heading 5Heading 6Body textLorem ipsum dolor sit amet, test link adipiscing elit.</description>
+    </item>
+    
+  </channel>
+</rss>

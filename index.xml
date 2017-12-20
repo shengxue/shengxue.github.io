@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Runner</title>
+    <link>/</link>
+    <description>Recent content on Runner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 07 Nov 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About this theme</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>This is a port of the HPSTR theme to Hugo. All the original features are intact and described below. Credit for the theme goes entirely to Michael Rose.
+They say three times the charm, so here is another free responsive Jekyll blog theme for you. I&amp;rsquo;ve learned a ton since open sourcing my first two themes on Github, and wanted to try a few new things this time around.</description>
+    </item>
+    
+    <item>
+      <title>Exercise 4 - Neural Network Learning</title>
+      <link>/posts/2016-11-07-exercise4-neural-network-learning/</link>
+      <pubDate>Mon, 07 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2016-11-07-exercise4-neural-network-learning/</guid>
+      <description>1. Neural NetworksFeedforward and const functionThe cost function for the neural network (without regularization) is
+\[J(\theta) = \frac{1}{m}\sum_{i=1}^m\sum_{k=1}^K\bigg[−y_k^{(i)}\log((h_{θ}(x^{(i)}))_k)−(1−y_k^{(i)})\log(1−(h_θ(x^{(i)}))_k)\bigg]\],
+where \(h_{\theta}(x^{(i)})\) is computed as shown in the Figure 2 and \(K = 10\) is the total number of possible labels. Note that \(h_θ(x^{(i)})_k = a^{(3)}_k\) is the activation (output value) of the \(k\)-th output unit.
+Implementation-nnCostFunction.m
+a1 = [ones(m, 1) X];z2 = a1*Theta1&amp;#39;;a2 = [ones(size(z2, 1), 1) sigmoid(z2)];z3 = a2*Theta2&amp;#39;;a3 = sigmoid(z3);yd = eye(num_labels);y = yd(y,:);log_dif = -log(a3).</description>
+    </item>
+    
+    <item>
+      <title>Octave in Sublime Text3</title>
+      <link>/posts/2016-11-06-octave/</link>
+      <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2016-11-06-octave/</guid>
+      <description>Install OctaveDownload Octave from https://ftp.gnu.org/gnu/octave/windows/, and register its folder to environment variable Path.
+Create build system for Octave file in Sublime Text3Octave.sublime_build
+{&amp;quot;cmd&amp;quot;: [&amp;quot;octave-gui&amp;quot;, &amp;quot;$file&amp;quot;],&amp;quot;shell&amp;quot;: true // to show plots}Create short-cut for canceling buildAdd the line to Preferencesbindings
+{ &amp;quot;keys&amp;quot;: [&amp;quot;ctrl+shift+b&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;exec&amp;quot;, &amp;quot;args&amp;quot;: {&amp;quot;kill&amp;quot;: true} },</description>
+    </item>
+    
+    <item>
+      <title>Exercise 3 - Multi-class Classification</title>
+      <link>/posts/2016-10-23-exercise3-multi-class-classification/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2016-10-23-exercise3-multi-class-classification/</guid>
+      <description>Cost function, gradient of regularized logistic regression for multi-class classification are similar to exercise 2.
+This exercise implement one-vs-all classification by training multiple regularized logistic regression classifiers, one for each of the K classes in our dataset.
+oneVsAll.m
+function [all_theta] = oneVsAll(X, y, num_labels, lambda)%ONEVSALL trains multiple logistic regression classifiers and returns all%the classifiers in a matrix all_theta, where the i-th row of all_theta %corresponds to the classifier for label i% [all_theta] = ONEVSALL(X, y, num_labels, lambda) trains num_labels% logisitc regression classifiers and returns each of these classifiers% in a matrix all_theta, where the i-th row of all_theta corresponds % to the classifier for label i% Some useful variablesm = size(X, 1);n = size(X, 2);% You need to return the following variables correctly all_theta = zeros(num_labels, n + 1);% Add ones to the X data matrixX = [ones(m, 1) X];% ====================== YOUR CODE HERE ======================% Instructions: You should complete the following code to train num_labels% logistic regression classifiers with regularization% parameter lambda.</description>
+    </item>
+    
+    <item>
+      <title>Exercise 3 - Neural Networks</title>
+      <link>/posts/2016-10-23-exercise3-neural-networks/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2016-10-23-exercise3-neural-networks/</guid>
+      <description>Logistic regression cannot form more complex hypotheses as it is only a linear classifier1.
+You could add more features (such as polynomial features) to logistic regression, but that can be very expensive to train.↩
+</description>
+    </item>
+    
+    <item>
+      <title>Exercise 2 - Logistic Regression (1)</title>
+      <link>/posts/2016-10-19-exercise2-logistic-regression/</link>
+      <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2016-10-19-exercise2-logistic-regression/</guid>
+      <description>1 Logistic Regression1.1 Visualizing dataplotdata.mfunction plotData(X, y)%PLOTDATA Plots the data points X and y into a new figure % PLOTDATA(x,y) plots the data points with + for the positive examples% and o for the negative examples. X is assumed to be a Mx2 matrix.% Create New Figurefigure; hold on;% ====================== YOUR CODE HERE ======================% Instructions: Plot the positive and negative examples on a% 2D plot, using the option &amp;#39;k+&amp;#39; for the positive% examples and &amp;#39;ko&amp;#39; for the negative examples.</description>
+    </item>
+    
+    <item>
+      <title>Exercise 2 - Logistic Regression (2)</title>
+      <link>/posts/2016-10-21-exercise2-regularized-logistic-regression/</link>
+      <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2016-10-21-exercise2-regularized-logistic-regression/</guid>
+      <description>2 Regularized Logistic Regression2.1 Visualizing the data{: .image-center} Figure shows that our dataset cannot be separated into positive and negative examples by a straight-line through the plot. Therefore, a straightforward application of logistic regression will not perform well on this dataset since logistic regression will only be able to find a linear decision boundary.
+2.2 Feature mappingOne way to fit the data better is to create more features from each data point.</description>
+    </item>
+    
+    <item>
+      <title>Exercise 1- Linear Regression</title>
+      <link>/posts/2016-10-17-exercise1-linear-regression/</link>
+      <pubDate>Mon, 17 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2016-10-17-exercise1-linear-regression/</guid>
+      <description>1. Sublime Text3 Octave build system{&amp;quot;cmd&amp;quot;: [&amp;quot;octave-gui&amp;quot;, &amp;quot;$file&amp;quot;],&amp;quot;shell&amp;quot;: true // to show plots}2. Linear regression with one variableplotdata.mfunction plotData(x, y)%PLOTDATA Plots the data points x and y into a new figure % PLOTDATA(x,y) plots the data points and gives the figure axes labels of% population and profit.% ====================== YOUR CODE HERE ======================% Instructions: Plot the training data into a figure using the % &amp;quot;figure&amp;quot; and &amp;quot;plot&amp;quot; commands.</description>
+    </item>
+    
+    <item>
+      <title>R markdown in Sublime Text3</title>
+      <link>/posts/2016-08-10-r-markdown/</link>
+      <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2016-08-10-r-markdown/</guid>
+      <description>1. Install Sublime Text plugin randy3k/R-box2 Windows2.1. Create my own sublime-build for R markdown filesThe default build system of R-box doesn’t work, and get the error
+Error: &amp;#39;\G&amp;#39; is an unrecognized escape in character string starting &amp;quot;&amp;#39;C:\G&amp;quot;Execution halted[Finished in 0.4s with exit code 1]since the windows path escape is not correctly handled.
+This issue can be resolved by regular expression replacement 1
+{&amp;quot;selector&amp;quot;: &amp;quot;text.</description>
+    </item>
+    
+    <item>
+      <title>First Post</title>
+      <link>/posts/2016-07-30-first-post/</link>
+      <pubDate>Sat, 30 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2016-07-30-first-post/</guid>
+      <description>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
+Mathjax 1LaTeX math delimiters: \\(a^2 + b^2 = c^2\\) or “\(a^2 + b^2 = c^2\)” for inline math \(a^2 + b^2 = c^2\); and \\[a^2 + b^2 = c^2\\] for displayed equations \[a^2 + b^2 = c^2\].
+Heading 1Heading 2Heading 3Heading 4Heading 5Heading 6Body textLorem ipsum dolor sit amet, test link adipiscing elit.</description>
+    </item>
+    
+    <item>
+      <title>Theme Setup</title>
+      <link>/theme-setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/theme-setup/</guid>
+      <description>This is a port of the HPSTR theme to Hugo. This theme is perfect for bloggers.
+Get the theme With Git installed, run the following commands inside the Hugo site folder. If Hugo has not yet been installed, read the setup guide here.
+$ mkdir themes $ cd themes $ git clone https://github.com/dldx/hpstr-hugo-theme.git hpstr  You can get a zip of the latest version of the theme from the home page and extract it to the themes folder.</description>
+    </item>
+    
+  </channel>
+</rss>
