@@ -6,19 +6,18 @@
     <description>Recent content on Runner</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 07 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>About this theme</title>
+      <title>About me</title>
       <link>/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 20 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>This is a port of the HPSTR theme to Hugo. All the original features are intact and described below. Credit for the theme goes entirely to Michael Rose.
-They say three times the charm, so here is another free responsive Jekyll blog theme for you. I&amp;rsquo;ve learned a ton since open sourcing my first two themes on Github, and wanted to try a few new things this time around.</description>
+      <description></description>
     </item>
     
     <item>
@@ -118,17 +117,6 @@ This issue can be resolved by regular expression replacement 1
       <description>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
 Mathjax 1LaTeX math delimiters: \\(a^2 + b^2 = c^2\\) or “\(a^2 + b^2 = c^2\)” for inline math \(a^2 + b^2 = c^2\); and \\[a^2 + b^2 = c^2\\] for displayed equations \[a^2 + b^2 = c^2\].
 Heading 1Heading 2Heading 3Heading 4Heading 5Heading 6Body textLorem ipsum dolor sit amet, test link adipiscing elit.</description>
-    </item>
-    
-    <item>
-      <title>Theme Setup</title>
-      <link>/theme-setup/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/theme-setup/</guid>
-      <description>This is a port of the HPSTR theme to Hugo. This theme is perfect for bloggers.
-Get the theme With Git installed, run the following commands inside the Hugo site folder. If Hugo has not yet been installed, read the setup guide here.
-$ mkdir themes $ cd themes $ git clone https://github.com/dldx/hpstr-hugo-theme.git hpstr  You can get a zip of the latest version of the theme from the home page and extract it to the themes folder.</description>
     </item>
     
   </channel>
