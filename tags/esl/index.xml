@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ESL on Runner</title>
+    <link>/tags/esl/</link>
+    <description>Recent content in ESL on Runner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 07 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/esl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Element of Statistic Learning - Chapter 5</title>
+      <link>/posts/2019-10-07-esl-note/</link>
+      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2019-10-07-esl-note/</guid>
+      <description>NotesEigen-decomposition\[S = \sum_{k=1}^N \rho_ku_ku_k^T\]</description>
+    </item>
+    
+  </channel>
+</rss>

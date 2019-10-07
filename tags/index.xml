@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Runner</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 07 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ESL</title>
+      <link>/tags/esl/</link>
+      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/esl/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Assignment</title>
@@ -21,38 +30,11 @@
     </item>
     
     <item>
-      <title>Latex</title>
-      <link>/tags/latex/</link>
-      <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/latex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
+      <title>Machine learning</title>
       <link>/tags/machine-learning/</link>
       <pubDate>Mon, 07 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Octave</title>
-      <link>/tags/octave/</link>
-      <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/octave/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R Markdown</title>
-      <link>/tags/r-markdown/</link>
-      <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r-markdown/</guid>
       <description></description>
     </item>
     
@@ -66,6 +48,15 @@
     </item>
     
     <item>
+      <title>Octave</title>
+      <link>/tags/octave/</link>
+      <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/octave/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Sublime Text</title>
       <link>/tags/sublime-text/</link>
       <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
@@ -75,7 +66,25 @@
     </item>
     
     <item>
-      <title>Test</title>
+      <title>Latex</title>
+      <link>/tags/latex/</link>
+      <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R markdown</title>
+      <link>/tags/r-markdown/</link>
+      <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r-markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>test</title>
       <link>/tags/test/</link>
       <pubDate>Sat, 30 Jul 2016 00:00:00 +0000</pubDate>
       

@@ -3,8 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/tags/esl/</loc>
+    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2019-10-07-esl-note/</loc>
+    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/about/</loc>
     <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/assignment/</loc>
+    <lastmod>2016-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -13,7 +43,27 @@
   </url>
   
   <url>
+    <loc>/tags/machine-learning/</loc>
+    <lastmod>2016-11-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/stanford/</loc>
+    <lastmod>2016-11-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/octave/</loc>
+    <lastmod>2016-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/2016-11-06-octave/</loc>
+    <lastmod>2016-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/sublime-text/</loc>
     <lastmod>2016-11-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -43,6 +93,16 @@
   </url>
   
   <url>
+    <loc>/tags/latex/</loc>
+    <lastmod>2016-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r-markdown/</loc>
+    <lastmod>2016-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/2016-08-10-r-markdown/</loc>
     <lastmod>2016-08-11T00:00:00+00:00</lastmod>
   </url>
@@ -53,74 +113,12 @@
   </url>
   
   <url>
-    <loc>/tags/assignment/</loc>
-    <lastmod>2016-11-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>/tags/test/</loc>
+    <lastmod>2016-07-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/latex/</loc>
-    <lastmod>2016-08-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/machine-learning/</loc>
-    <lastmod>2016-11-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/octave/</loc>
-    <lastmod>2016-11-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2016-11-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/r-markdown/</loc>
-    <lastmod>2016-08-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/stanford/</loc>
-    <lastmod>2016-11-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/sublime-text/</loc>
-    <lastmod>2016-11-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2016-11-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/test/</loc>
-    <lastmod>2016-07-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

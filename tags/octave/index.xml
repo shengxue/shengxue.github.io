@@ -17,7 +17,7 @@
       <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>/posts/2016-11-06-octave/</guid>
-      <description>Install OctaveDownload Octave from https://ftp.gnu.org/gnu/octave/windows/, and register its folder to environment variable Path.
+      <description>Install OctaveDownload Octave from https://ftp.gnu.org/gnu/octave/windows/, and register its folder to environment variable Path.
 Create build system for Octave file in Sublime Text3Octave.sublime_build
 {&amp;quot;cmd&amp;quot;: [&amp;quot;octave-gui&amp;quot;, &amp;quot;$file&amp;quot;],&amp;quot;shell&amp;quot;: true // to show plots}Create short-cut for canceling buildAdd the line to Preferencesbindings
 { &amp;quot;keys&amp;quot;: [&amp;quot;ctrl+shift+b&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;exec&amp;quot;, &amp;quot;args&amp;quot;: {&amp;quot;kill&amp;quot;: true} },</description>

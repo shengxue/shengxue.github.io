@@ -42,7 +42,7 @@ function [all_theta] = oneVsAll(X, y, num_labels, lambda)%ONEVSALL trains multi
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>/posts/2016-10-23-exercise3-neural-networks/</guid>
-      <description>Logistic regression cannot form more complex hypotheses as it is only a linear classifier1.
+      <description>Logistic regression cannot form more complex hypotheses as it is only a linear classifier1.
 You could add more features (such as polynomial features) to logistic regression, but that can be very expensive to train.↩
 </description>
     </item>
