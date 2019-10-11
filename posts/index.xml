@@ -6,10 +6,34 @@
     <description>Recent content in Posts on Runner</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 07 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Matrix cookbook - Trace</title>
+      <link>/posts/2019-10-11-matrix-cookbook-trace/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2019-10-11-matrix-cookbook-trace/</guid>
+      <description>\[\begin{equation}\tag{11}\operatorname{Tr}(\mathbf{A})=\sum_{i} A_{i i}\end{equation}\]
+Let’s write the trace in a more convenient way. We have: 1\[\begin{equation}A e_{i}=\left[\begin{array}{ccc}{a_{11}} &amp;amp; {\cdots} &amp;amp; {a_{1 n}} \\ {\vdots} &amp;amp; {\ddots} &amp;amp; {\vdots} \\ {a_{n 1}} &amp;amp; {\cdots} &amp;amp; {a_{n n}}\end{array}\right]\left[\begin{array}{c}{0} \\ {\vdots} \\ {1} \\ {\vdots} \\ {0}\end{array}\right]=\left[\begin{array}{c}{a_{i 1}} \\ {\vdots} \\ {a_{i n}}\end{array}\right]\end{equation}\]where the \(1\) is in the \(i\)-th entry. This way:\[\begin{equation}\left\langle e_{i}, A e_{i}\right\rangle= e_{i}^{t} A e_{i}=A_{i i}\end{equation}\]So \(\operatorname{Tr}(\mathbf{A})=\sum_{i}A_{ii}\).</description>
+    </item>
+    
+    <item>
+      <title>Matrix cookbook - Basics</title>
+      <link>/posts/2019-10-10-matrix-cookbook/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2019-10-10-matrix-cookbook/</guid>
+      <description>\[\begin{equation}\tag{1}(\mathbf{A B})^{-1}=\mathbf{B}^{-1} \mathbf{A}^{-1}\end{equation}\]
+\[\begin{equation}\tag{2}(\mathbf{A B C} \ldots)^{-1}=\ldots \mathbf{C}^{-1} \mathbf{B}^{-1} \mathbf{A}^{-1}\end{equation}\]
+\[\begin{equation}\tag{3}\left(\mathbf{A}^{T}\right)^{-1}=\left(\mathbf{A}^{-1}\right)^{T}\end{equation}\]
+\[\begin{equation}\tag{4}(\mathbf{A}+\mathbf{B})^{T}=\mathbf{A}^{T}+\mathbf{B}^{T}\end{equation}\]
+\[\begin{equation}\tag{5}(\mathbf{A B})^{T}=\mathbf{B}^{T} \mathbf{A}^{T}\end{equation}\]
+\[\begin{equation}\tag{6}(\mathbf{A B C} \ldots)^{T}=\ldots \mathbf{C}^{T} \mathbf{B}^{T} \mathbf{A}^{T}\end{equation}\]</description>
+    </item>
     
     <item>
       <title>The Element of Statistic Learning - Chapter 5</title>
