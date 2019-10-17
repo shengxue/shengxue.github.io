@@ -17,8 +17,8 @@
       <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>/posts/2016-08-10-r-markdown/</guid>
-      <description>1. Install Sublime Text plugin randy3k/R-box2 Windows2.1. Create my own sublime-build for R markdown filesThe default build system of R-box doesn’t work, and get the error
-Error: &amp;#39;\G&amp;#39; is an unrecognized escape in character string starting &amp;quot;&amp;#39;C:\G&amp;quot;Execution halted[Finished in 0.4s with exit code 1]since the windows path escape is not correctly handled.
+      <description>1. Install Sublime Text plugin randy3k/R-box  2 Windows 2.1. Create my own sublime-build for R markdown files The default build system of R-box doesn’t work, and get the error
+Error: &amp;#39;\G&amp;#39; is an unrecognized escape in character string starting &amp;quot;&amp;#39;C:\G&amp;quot; Execution halted [Finished in 0.4s with exit code 1] since the windows path escape is not correctly handled.
 This issue can be resolved by regular expression replacement 1</description>
     </item>
     
