@@ -147,6 +147,93 @@
     
     <div class="entry-meta">
          
+		<span class="entry-date date published updated"><time datetime="2016-11-07 00:00:00 &#43;0000 UTC"><a href="/posts/2016-11-07-exercise4-neural-network-learning/">Nov 7, 2016</a></time></span>
+        
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        Reading time ~1 minute
+      </span>
+    </div>
+    
+	<h1 class="entry-title"><a href="/posts/2016-11-07-exercise4-neural-network-learning/" rel="bookmark" title="Exercise 4 - Neural Network Learning" itemprop="url">Exercise 4 - Neural Network Learning</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    
+
+
+<div id="neural-networks" class="section level1">
+<h1>1. Neural Networks</h1>
+<div id="feedforward-and-const-function" class="section level2">
+<h2>Feedforward and const function</h2>
+<p>The cost function for the neural network (without regularization) is</p>
+<p><span class="math display">\[
+J(\theta) = \frac{1}{m}\sum_{i=1}^m\sum_{k=1}^K
+\bigg[
+−y_k^{(i)}\log((h_{θ}(x^{(i)}))_k)−(1−y_k^{(i)})\log(1−(h_θ(x^{(i)}))_k)
+\bigg]
+\]</span>,</p>
+<p>where <span class="math inline">\(h_{\theta}(x^{(i)})\)</span> is computed as shown in the Figure 2 and <span class="math inline">\(K = 10\)</span> is the total number of possible labels. Note that <span class="math inline">\(h_θ(x^{(i)})_k = a^{(3)}_k\)</span> is the activation (output value) of the <span class="math inline">\(k\)</span>-th output unit.</p>
+<p><strong>Implementation-nnCostFunction.m</strong></p>
+<pre class="m"><code>a1 = [ones(m, 1) X];
+z2 = a1*Theta1&#39;;
+a2 = [ones(size(z2, 1), 1) sigmoid(z2)];
+z3 = a2*Theta2&#39;;
+a3 = sigmoid(z3);
+
+yd = eye(num_labels);
+y = yd(y,:);
+
+log_dif = -log(a3).*y-log(1-a3).*(1-y);
+J=sum(log_dif(:))/m;
+</code></pre>
+</div>
+<div id="regularized-const-function" class="section level2">
+<h2>Regularized const function</h2>
+<p>The cost function for neural networks with regularization is given by</p>
+<p><span class="math display">\[
+J(\theta) = \frac{1}{m}\sum_{i=1}^m\sum_{k=1}^K
+\bigg[
+−y_k^{(i)}\log((h_{θ}(x^{(i)}))_k)−(1−y_k^{(i)})\log(1−(h_θ(x^{(i)}))_k)
+\bigg]
+\]</span></p>
+<p><span class="math display">\[
++ \frac{\lambda}{2m}\bigg[\sum_{j=1}^{25}\sum_{k=1}^{400}(\theta_{j,k}^{(1)})^2+\sum_{j=1}^{10}\sum_{k=1}^{25}(\theta_{j,k}^{(2)})^2\bigg]
+\]</span></p>
+<p><strong>Implementation-nnCostFunction.m</strong></p>
+<pre class="m"><code>a1 = [ones(m, 1) X];
+z2 = a1*Theta1&#39;;
+a2 = [ones(size(z2, 1), 1) sigmoid(z2)];
+z3 = a2*Theta2&#39;;
+a3 = sigmoid(z3);
+
+yd = eye(num_labels);
+y = yd(y,:);
+
+log_dif = -log(a3).*y-log(1-a3).*(1-y);
+
+Theta1s=Theta1(:,2:end);
+Theta2s=Theta2(:,2:end);
+
+penalty = lambda/(2*m)*(sum((Theta1s.*Theta1s)(:)) + sum((Theta2s.*Theta2s)(:)));
+J=sum(log_dif(:))/m + penalty;</code></pre>
+</div>
+</div>
+<div id="backpropagation" class="section level1">
+<h1>2. Backpropagation</h1>
+<div id="section" class="section level2">
+<h2></h2>
+</div>
+</div>
+
+  </div>
+</article>
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+         
 		<span class="entry-date date published updated"><time datetime="2016-11-06 00:00:00 &#43;0000 UTC"><a href="/posts/2016-11-06-octave/">Nov 6, 2016</a></time></span>
         
       <span class="entry-reading-time">
@@ -597,95 +684,6 @@ p = predict(theta, X);
 
 fprintf(&#39;Train Accuracy: %f\n&#39;, mean(double(p == y)) * 100);</code></pre>
 </div>
-</div>
-</div>
-
-  </div>
-</article>
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-         
-		<span class="entry-date date published updated"><time datetime="2016-10-19 00:00:00 &#43;0000 UTC"><a href="/posts/2016-10-21-exercise2-regularized-logistic-regression/">Oct 19, 2016</a></time></span>
-        
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        Reading time ~2 minutes
-      </span>
-    </div>
-    
-	<h1 class="entry-title"><a href="/posts/2016-10-21-exercise2-regularized-logistic-regression/" rel="bookmark" title="Exercise 2 - Logistic Regression (2)" itemprop="url">Exercise 2 - Logistic Regression (2)</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
-
-
-<div id="regularized-logistic-regression" class="section level1">
-<h1>2 Regularized Logistic Regression</h1>
-<div id="visualizing-the-data" class="section level2">
-<h2>2.1 Visualizing the data</h2>
-<p><img src="/images/exercise2-2.png" alt="Data Image" /> {: .image-center} Figure shows that our dataset cannot be separated into positive and negative examples by a straight-line through the plot. Therefore, a straightforward application of logistic regression will not perform well on this dataset since logistic regression will only be able to find a linear decision boundary.</p>
-</div>
-<div id="feature-mapping" class="section level2">
-<h2>2.2 Feature mapping</h2>
-<p>One way to fit the data better is to create more features from each data point. In the provided function <strong>mapFeature.m</strong>, we will map the features into all polynomial terms of <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> up to the sixth power. <span class="math display">\[
-feature(x) = \begin{bmatrix} \\\ 1 \\\ x_1 \\\ x_2 \\\ x_1^2  \\\ x_1x_2 \\\ x_2^2 \\\ x1^3 \\\ . \\\ . \\\ . \\\ x_1x_2^5 \\\ x_2^6
-                \end{bmatrix}
-\]</span></p>
-</div>
-<div id="cost-function-and-gradient" class="section level2">
-<h2>2.3 Cost function and gradient</h2>
-<p>The regularized cost function in logistic regression is <span class="math display">\[J(\theta) = \frac{1}{m}\sum_{i=1}^m[−y^{(i)}\log(h_\theta(x^{(i)})) − (1 − y^{(i)})\log(1 − h_\theta(x^{(i)}))] + \frac{\lambda}{2m}\sum_{j=1}^n\theta_j^2\]</span></p>
-<p>The gradient of the cost function is a vector where the <span class="math inline">\(j\)</span>th element is defined as follows:</p>
-<p><span class="math display">\[
-\begin{array}{lr}
-\frac{\partial J(\theta)}{\partial \theta_0} = \frac{1}{m}\sum_{i=1}^m\bigg(h_\theta(x^{(i)}) − y^{(i)}\bigg)x_j^{(i)} &amp; \text{for }j = 0 \\\
-\frac{\partial J(\theta)}{\partial \theta_j} = \frac{1}{m}\sum_{i=1}^m\bigg(h_\theta(x^{(i)}) − y^{(i)}\bigg)x_j^{(i)} + \frac{\lambda}{m}\theta_j &amp; \text{for }j \geq 1
-\end{array}
-\]</span></p>
-<p><strong>costFunctionReg.m</strong></p>
-<pre class="m"><code>function [J, grad] = costFunctionReg(theta, X, y, lambda)
-%COSTFUNCTIONREG Compute cost and gradient for logistic regression with regularization
-%   J = COSTFUNCTIONREG(theta, X, y, lambda) computes the cost of using
-%   theta as the parameter for regularized logistic regression and the
-%   gradient of the cost w.r.t. to the parameters. 
-
-% Initialize some useful values
-m = length(y); % number of training examples
-
-% You need to return the following variables correctly 
-J = 0;
-grad = zeros(size(theta));
-
-% ====================== YOUR CODE HERE ======================
-% Instructions: Compute the cost of a particular choice of theta.
-%               You should set J to the cost.
-%               Compute the partial derivatives and set grad to the partial
-%               derivatives of the cost w.r.t. each parameter in theta
-
-
-n = size(theta);
-h = sigmoid(X*theta);
-
-theta1 = [0 ; theta(2:n)];
-p = lambda*(theta1&#39;*theta1)/(2*m);
-
-J=(-y&#39;*log(h) - (1-y)&#39;*log(1-h))/m + p;
-
-grad = X&#39;*(h-y)/m + lambda*theta1/m;
-% =============================================================
-
-end</code></pre>
-<div id="learning-parameters-using-fiminunc" class="section level3">
-<h3>2.3.1 Learning parameters using fiminunc</h3>
-</div>
-</div>
-<div id="plotting-the-decision-boundary" class="section level2">
-<h2>2.4 Plotting the decision boundary</h2>
-<p><strong>plotDecisionBoundary.m</strong></p>
 </div>
 </div>
 

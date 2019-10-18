@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Matrix &#8211; Runner</title>
+<title>determinant &#8211; Runner</title>
 <meta name="description" content="">
 
     
@@ -14,16 +14,16 @@
 
 
 
-<meta name="twitter:title" content="Matrix">
+<meta name="twitter:title" content="determinant">
 <meta name="twitter:description" content="Time and pressure ...">
 
 
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="Matrix">
+<meta property="og:title" content="determinant">
 <meta property="og:description" content="Time and pressure ...">
-<meta property="og:url" content="/tags/matrix/">
+<meta property="og:url" content="/tags/determinant/">
 <meta property="og:site_name" content="Runner">
 
 
@@ -37,9 +37,9 @@
 
 
 
-<link rel="canonical" href="/tags/matrix/">
-<link href="/tags/matrix/index.xml" rel="alternate" type="application/rss+xml" title="Runner" />
-  <link href="/tags/matrix/index.xml" rel="feed" type="application/rss+xml" title="Runner" />
+<link rel="canonical" href="/tags/determinant/">
+<link href="/tags/determinant/index.xml" rel="alternate" type="application/rss+xml" title="Runner" />
+  <link href="/tags/determinant/index.xml" rel="feed" type="application/rss+xml" title="Runner" />
 
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -121,7 +121,7 @@
 	  <h2>
             
             
-              Matrix
+              determinant
             
           </h2>
     </div>
@@ -183,161 +183,6 @@
 \operatorname{det}\left(\mathbf{I}+\mathbf{u v}^{T}\right)=1+\mathbf{u}^{T} \mathbf{v}
 \end{equation}\]</span></p>
 <hr />
-
-  </div>
-</article>
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-         
-		<span class="entry-date date published updated"><time datetime="2019-10-11 00:00:00 &#43;0000 UTC"><a href="/posts/2019-10-11-matrix-cookbook-trace/">Oct 11, 2019</a></time></span>
-        
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        Reading time ~2 minutes
-      </span>
-    </div>
-    
-	<h1 class="entry-title"><a href="/posts/2019-10-11-matrix-cookbook-trace/" rel="bookmark" title="Matrix cookbook - Trace" itemprop="url">Matrix cookbook - Trace</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
-
-
-<p><span class="math display">\[\begin{equation}
-\tag{11}
-\operatorname{Tr}(\mathbf{A})=\sum_{i} A_{i i}
-\end{equation}\]</span></p>
-<blockquote>
-<p><span style="color:blue"> Let’s write the trace in a more convenient way. We have: <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
-<span class="math display">\[\begin{equation}
-A e_{i}=\left[\begin{array}{ccc}{a_{11}} &amp; {\cdots} &amp; {a_{1 n}} \\ {\vdots} &amp; {\ddots} &amp; {\vdots} \\ {a_{n 1}} &amp; {\cdots} &amp; {a_{n n}}\end{array}\right]\left[\begin{array}{c}{0} \\ {\vdots} \\ {1} \\ {\vdots} \\ {0}\end{array}\right]=\left[\begin{array}{c}{a_{i 1}} \\ {\vdots} \\ {a_{i n}}\end{array}\right]
-\end{equation}\]</span>
-where the <span class="math inline">\(1\)</span> is in the <span class="math inline">\(i\)</span>-th entry. This way:
-<span class="math display">\[\begin{equation}
-\left\langle e_{i}, A e_{i}\right\rangle= e_{i}^{t} A e_{i}=A_{i i}
-\end{equation}\]</span>
-So <span class="math inline">\(\operatorname{Tr}(\mathbf{A})=\sum_{i}A_{ii}\)</span></span>.</p>
-</blockquote>
-<p>Intuitive explanation <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
-<hr />
-<p><span class="math display">\[\begin{equation}
-\tag{12}
-\operatorname{Tr}(\mathbf{A})=\sum_{i} \lambda_{i}, \quad \lambda_{i}=\operatorname{eig}(\mathbf{A})
-\end{equation}\]</span></p>
-<blockquote>
-<p>If eigendecomposition of matrix <span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(\mathbf{A}=\mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^{-1}\)</span>, then according to equation (16):
-<span class="math display">\[\begin{align}
-\operatorname{Tr}(\mathbf{A})&amp;=\operatorname{Tr}(\mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^{-1}) \\
-&amp;=\operatorname{Tr}(\mathbf{\Lambda} \mathbf{Q}^{-1} \mathbf{Q}) \\
-&amp;=\operatorname{Tr}(\mathbf{\Lambda}) \\
-&amp;=\sum_{i} \lambda_{i}
-\end{align}\]</span></p>
-</blockquote>
-<hr />
-<p><span class="math display">\[\begin{equation}
-\tag{13}
-\operatorname{Tr}(\mathbf{A})=\operatorname{Tr}\left(\mathbf{A}^{T}\right)
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{14}
-\operatorname{Tr}(\mathbf{A B})=\operatorname{Tr}(\mathbf{B A})
-\end{equation}\]</span></p>
-<blockquote>
-<p>Now: <span class="math inline">\((\mathbf{A B})_{ij}=\sum_{k}A_{ik}B_{kj}\)</span>, and: <a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>
-<span class="math display">\[\begin{equation}
-\operatorname{tr}(A B)=\sum_{i} \sum_{k} A_{i k} B_{k i}
-\end{equation}\]</span></p>
-<p>On the other hand, <span class="math inline">\((\mathbf{B A})_{ij}=\sum_{k}B_{ik}A_{kj}\)</span>. So:
-<span class="math display">\[\begin{equation}
-\operatorname{tr}(B A)=\sum_{i} \sum_{k} B_{i k} A_{k i}
-\end{equation}\]</span>
-They are the same quantity, up to renaming indices <span class="math inline">\((i \leftrightarrow k)\)</span></p>
-</blockquote>
-<hr />
-<p><span class="math display">\[\begin{equation}
-\tag{15}
-\operatorname{Tr}(\mathbf{A}+\mathbf{B})=\operatorname{Tr}(\mathbf{A})+\operatorname{Tr}(\mathbf{B})
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{16}
-\operatorname{Tr}(\mathbf{A B C})=\operatorname{Tr}(\mathbf{B C A})=\operatorname{Tr}(\mathbf{C A B})
-\end{equation}\]</span></p>
-<hr />
-<p><span class="math display">\[\begin{equation}
-\tag{17}
-\mathbf{a}^{T} \mathbf{a}=\operatorname{Tr}\left(\mathbf{a a}^{T}\right)
-\end{equation}\]</span></p>
-<blockquote>
-<p><span class="math display">\[\begin{align}
-\mathbf{a a}^{T}&amp;=\left[\begin{array}{c}{a_{1}} \\ {\vdots} \\ {a_{n}}\end{array}\right]\left[{a_{1}}, {\cdots}, {a_{n}}\right] \\
-&amp;=\left[\begin{array}{ccc}{a_{1}}^{2} &amp; {\cdots} &amp; {a_{1}a_{n}} \\ {\vdots} &amp; {\ddots} &amp; {\vdots} \\ {a_{n}a_{1}} &amp; {\cdots} &amp; {a_{n}}^{2}\end{array}\right]
-\end{align}\]</span></p>
-<p>So,
-<span class="math display">\[\begin{equation}
-\operatorname{Tr}\left(\mathbf{a a}^{T}\right) = a_{1}^{2}+\cdots+a_{n}^{2} = \mathbf{a}^{T} \mathbf{a}
-\end{equation}\]</span></p>
-</blockquote>
-<div class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p><a href="https://math.stackexchange.com/questions/1314142/trace-of-ab-trace-of-ba/1314150" class="uri">https://math.stackexchange.com/questions/1314142/trace-of-ab-trace-of-ba/1314150</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p><a href="https://github.com/shengxue/Matrix-Cookbook-Notes/blob/master/1.1%20Trace/1.1%20Trace.ipynb">jupyter notebook</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
-<li id="fn3"><p><a href="https://math.stackexchange.com/questions/1314142/trace-of-ab-trace-of-ba/1314150" class="uri">https://math.stackexchange.com/questions/1314142/trace-of-ab-trace-of-ba/1314150</a><a href="#fnref3" class="footnote-back">↩</a></p></li>
-</ol>
-</div>
-
-  </div>
-</article>
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-         
-		<span class="entry-date date published updated"><time datetime="2019-10-10 00:00:00 &#43;0000 UTC"><a href="/posts/2019-10-10-matrix-cookbook/">Oct 10, 2019</a></time></span>
-        
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        Reading time ~1 minute
-      </span>
-    </div>
-    
-	<h1 class="entry-title"><a href="/posts/2019-10-10-matrix-cookbook/" rel="bookmark" title="Matrix cookbook - Basics" itemprop="url">Matrix cookbook - Basics</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
-
-
-
-<p><span class="math display">\[\begin{equation}
-\tag{1}
-(\mathbf{A B})^{-1}=\mathbf{B}^{-1} \mathbf{A}^{-1}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{2}
-(\mathbf{A B C} \ldots)^{-1}=\ldots \mathbf{C}^{-1} \mathbf{B}^{-1} \mathbf{A}^{-1}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{3}
-\left(\mathbf{A}^{T}\right)^{-1}=\left(\mathbf{A}^{-1}\right)^{T}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{4}
-(\mathbf{A}+\mathbf{B})^{T}=\mathbf{A}^{T}+\mathbf{B}^{T}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{5}
-(\mathbf{A B})^{T}=\mathbf{B}^{T} \mathbf{A}^{T}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{6}
-(\mathbf{A B C} \ldots)^{T}=\ldots \mathbf{C}^{T} \mathbf{B}^{T} \mathbf{A}^{T}
-\end{equation}\]</span></p>
 
   </div>
 </article>

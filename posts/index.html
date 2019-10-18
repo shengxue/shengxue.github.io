@@ -150,6 +150,63 @@
     
     <div class="entry-meta">
          
+		<span class="entry-date date published updated"><time datetime="2019-10-11 00:00:00 &#43;0000 UTC"><a href="/posts/2019-10-17-matrix-cookbook-1.2-determinant/">Oct 11, 2019</a></time></span>
+        
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        Reading time ~1 minute
+      </span>
+    </div>
+    
+	<h1 class="entry-title"><a href="/posts/2019-10-17-matrix-cookbook-1.2-determinant/" rel="bookmark" title="Matrix cookbook - determinant" itemprop="url">Matrix cookbook - determinant</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    
+
+
+<p><span class="math display">\[\begin{equation}
+\tag{18}
+\operatorname{det}(\mathbf{A})=\prod_{i} \lambda_{i} \quad \lambda_{i}=\operatorname{eig}(\mathbf{A})
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\tag{19}
+\operatorname{det}(c \mathbf{A})=c^{n} \operatorname{det}(\mathbf{A}), \quad \text { if } \mathbf{A} \in \mathbb{R}^{n \times n}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\tag{20}
+\operatorname{det}\left(\mathbf{A}^{T}\right)=\operatorname{det}(\mathbf{A})
+\end{equation}\]</span></p>
+<hr />
+<p><span class="math display">\[\begin{equation}
+\tag{21}
+\operatorname{det}(\mathbf{A B})=\operatorname{det}(\mathbf{A}) \operatorname{det}(\mathbf{B})
+\end{equation}\]</span></p>
+<p>The determinant of a tranformation matrix is the scale of area/volume of the shape before and after the tranformation. <span class="math inline">\(\mathbf{A B}\)</span> are two consecutive transformations, therefore its determinant is the product of two scales.</p>
+<hr />
+<p><span class="math display">\[\begin{equation}
+\tag{22}
+\operatorname{det}\left(\mathbf{A}^{-1}\right)=1 / \operatorname{det}(\mathbf{A})
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\tag{23}
+\operatorname{det}\left(\mathbf{A}^{n}\right)=\operatorname{det}(\mathbf{A})^{n}
+\end{equation}\]</span></p>
+<hr />
+<p><span class="math display">\[\begin{equation}
+\tag{24}
+\operatorname{det}\left(\mathbf{I}+\mathbf{u v}^{T}\right)=1+\mathbf{u}^{T} \mathbf{v}
+\end{equation}\]</span></p>
+<hr />
+
+  </div>
+</article>
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+         
 		<span class="entry-date date published updated"><time datetime="2019-10-11 00:00:00 &#43;0000 UTC"><a href="/posts/2019-10-11-matrix-cookbook-trace/">Oct 11, 2019</a></time></span>
         
       <span class="entry-reading-time">
@@ -413,47 +470,6 @@ J=sum(log_dif(:))/m + penalty;</code></pre>
 <div id="section" class="section level2">
 <h2></h2>
 </div>
-</div>
-
-  </div>
-</article>
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-         
-		<span class="entry-date date published updated"><time datetime="2016-11-06 00:00:00 &#43;0000 UTC"><a href="/posts/2016-11-06-octave/">Nov 6, 2016</a></time></span>
-        
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        Reading time ~1 minute
-      </span>
-    </div>
-    
-	<h1 class="entry-title"><a href="/posts/2016-11-06-octave/" rel="bookmark" title="Octave in Sublime Text3" itemprop="url">Octave in Sublime Text3</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
-
-
-<div id="install-octave" class="section level1">
-<h1>Install Octave</h1>
-<p>Download Octave from <a href="https://ftp.gnu.org/gnu/octave/windows/" class="uri">https://ftp.gnu.org/gnu/octave/windows/</a>, and register its folder to environment variable <em>Path</em>.</p>
-</div>
-<div id="create-build-system-for-octave-file-in-sublime-text3" class="section level1">
-<h1>Create build system for Octave file in Sublime Text3</h1>
-<p>Octave.sublime_build</p>
-<pre class="json"><code>{
-    &quot;cmd&quot;: [&quot;octave-gui&quot;, &quot;$file&quot;],
-    &quot;shell&quot;: true   // to show plots
-}</code></pre>
-</div>
-<div id="create-short-cut-for-canceling-build" class="section level1">
-<h1>Create short-cut for canceling build</h1>
-<p>Add the line to Preferencesbindings</p>
-<pre class="json"><code>{ &quot;keys&quot;: [&quot;ctrl+shift+b&quot;], &quot;command&quot;: &quot;exec&quot;, &quot;args&quot;: {&quot;kill&quot;: true} },</code></pre>
 </div>
 
   </div>

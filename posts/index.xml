@@ -12,6 +12,20 @@
     
     
     <item>
+      <title>Matrix cookbook - determinant</title>
+      <link>/posts/2019-10-17-matrix-cookbook-1.2-determinant/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2019-10-17-matrix-cookbook-1.2-determinant/</guid>
+      <description>\[\begin{equation}\tag{18}\operatorname{det}(\mathbf{A})=\prod_{i} \lambda_{i} \quad \lambda_{i}=\operatorname{eig}(\mathbf{A})\end{equation}\]
+\[\begin{equation}\tag{19}\operatorname{det}(c \mathbf{A})=c^{n} \operatorname{det}(\mathbf{A}), \quad \text { if } \mathbf{A} \in \mathbb{R}^{n \times n}\end{equation}\]
+\[\begin{equation}\tag{20}\operatorname{det}\left(\mathbf{A}^{T}\right)=\operatorname{det}(\mathbf{A})\end{equation}\]
+\[\begin{equation}\tag{21}\operatorname{det}(\mathbf{A B})=\operatorname{det}(\mathbf{A}) \operatorname{det}(\mathbf{B})\end{equation}\]
+The determinant of a tranformation matrix is the scale of area/volume of the shape before and after the tranformation. \(\mathbf{A B}\) are two consecutive transformations, therefore its determinant is the product of two scales.
+\[\begin{equation}\tag{22}\operatorname{det}\left(\mathbf{A}^{-1}\right)=1 / \operatorname{det}(\mathbf{A})\end{equation}\]</description>
+    </item>
+    
+    <item>
       <title>Matrix cookbook - Trace</title>
       <link>/posts/2019-10-11-matrix-cookbook-trace/</link>
       <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
