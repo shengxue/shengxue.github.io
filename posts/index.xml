@@ -6,10 +6,24 @@
     <description>Recent content in Posts on Runner</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 11 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Matrix cookbook - Derivative</title>
+      <link>/posts/2019-10-24-matrix-derivative/</link>
+      <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2019-10-24-matrix-derivative/</guid>
+      <description>\[\begin{equation}\tag{40}\partial\left(\mathbf{X}^{-1}\right)=-\mathbf{X}^{-1}(\partial \mathbf{X}) \mathbf{X}^{-1}\end{equation}\]
+Explanation: 1\[\begin{equation}\underbrace{(I)^{\prime}}_{=0}=\left(\mathbf{X} \mathbf{X}^{-1}\right)^{\prime}=\mathbf{X}^{\prime} \mathbf{X}^{-1}+\mathbf{X}\left(\mathbf{X}^{-1}\right)^{\prime} \Rightarrow\end{equation}\]
+\[\begin{equation}\mathbf{X}\left(\mathbf{X}^{-1}\right)^{\prime}=-\mathbf{X}^{\prime} \mathbf{X}^{-1} \quad \Rightarrow\end{equation}\]
+\[\begin{equation}\left(\mathbf{X}^{-1}\right)^{\prime}=-\mathbf{X}^{-1} \mathbf{X}^{\prime} \mathbf{X}^{-1}\end{equation}\]
+https://math.stackexchange.com/questions/1471825/derivative-of-the-inverse-of-a-matrix↩
+</description>
+    </item>
     
     <item>
       <title>Matrix cookbook - determinant</title>
