@@ -56,6 +56,7 @@
 
 
 <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/note.css">
 
 <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
 
@@ -169,8 +170,10 @@
 \tag{40}
 \partial\left(\mathbf{X}^{-1}\right)=-\mathbf{X}^{-1}(\partial \mathbf{X}) \mathbf{X}^{-1}
 \end{equation}\]</span></p>
-<p>Explanation: <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
-<span class="math display">\[\begin{equation}
+<blockquote>
+<p><strong>Explanation</strong>: <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+</blockquote>
+<p><span class="math display">\[\begin{equation}
 \underbrace{(I)^{\prime}}_{=0}=\left(\mathbf{X} \mathbf{X}^{-1}\right)^{\prime}=\mathbf{X}^{\prime} \mathbf{X}^{-1}+\mathbf{X}\left(\mathbf{X}^{-1}\right)^{\prime} \Rightarrow
 \end{equation}\]</span></p>
 <p><span class="math display">\[\begin{equation}
@@ -179,10 +182,68 @@
 <p><span class="math display">\[\begin{equation}
 \left(\mathbf{X}^{-1}\right)^{\prime}=-\mathbf{X}^{-1} \mathbf{X}^{\prime} \mathbf{X}^{-1}
 \end{equation}\]</span></p>
+<hr />
+<p><span class="math display">\[\begin{equation}
+\tag{41}
+\partial(\operatorname{det}(\mathbf{X}))=\operatorname{Tr}(\operatorname{adj}(\mathbf{X}) \partial \mathbf{X})
+\end{equation}\]</span></p>
+<div id="background" class="section level2">
+<h2>Background</h2>
+<div id="adjugate-matrix" class="section level3">
+<h3>Adjugate Matrix</h3>
+<p>The adjugate of <span class="math inline">\(A\)</span> is the transpose of the cofactor matrix <span class="math inline">\(C\)</span> of <span class="math inline">\(X\)</span>,
+<span class="math display">\[\begin{equation}
+\operatorname{adj}(\mathbf{X})=\mathbf{C}^{\top}
+\end{equation}\]</span></p>
+<p>and,
+<span class="math display">\[\begin{equation}
+\mathbf{X}^{-1}=\operatorname{det}(\mathbf{X})^{-1} \operatorname{adj}(\mathbf{X}) \quad \Rightarrow
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\operatorname{det}(\mathbf{X}) \mathbf{I} = \operatorname{adj}(\mathbf{X}) \mathbf{X}
+\end{equation}\]</span></p>
+</div>
+<div id="characteristic-polynomial" class="section level3">
+<h3>Characteristic Polynomial</h3>
+<p class="notes">
+The characteristic polynomial of a square matrix is a polynomial which is invariant under matrix similarity and has the eigenvalues as roots. It has the determinant and the trace of the matrix as coefficients.
+</p>
+<p>The characteristic polynomial of a sqaure matrix <span class="math inline">\(A\)</span> is defined by
+<span class="math display">\[\begin{equation}
+p_{A}(t)=\operatorname{det}(t I-A)
+\end{equation}\]</span></p>
+</div>
+</div>
+<div id="proof-2" class="section level2">
+<h2>Proof <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></h2>
+<div id="via-matrix-computation" class="section level3">
+<h3>Via Matrix Computation</h3>
+<p><span class="math display">\[\begin{equation}
+\frac{\partial \operatorname{det}(\mathbf{X})}{\partial \mathbf{X}_{i j}}=\sum_{k} \operatorname{adj}^{\mathrm{T}}(\mathbf{X})_{i k} \delta_{j k}=\operatorname{adj}^{\mathrm{T}}(\mathbf{X})_{i j} \quad \Rightarrow
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+d(\operatorname{det}(\mathbf{X}))=\sum_{i} \sum_{j} \operatorname{adj}^{\mathrm{T}}(\mathbf{X})_{i j} d \mathbf{X}_{i j} \quad \Rightarrow
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+d(\operatorname{det}(\mathbf{X}))=\operatorname{tr}(\operatorname{adj}(\mathbf{X}) d \mathbf{X})
+\end{equation}\]</span></p>
+</div>
+<div id="via-chain-rule" class="section level3">
+<h3>Via Chain Rule</h3>
+<p><strong>Lemma 1.</strong> <span class="math inline">\(\operatorname{det}^{\prime}(I)=\operatorname{tr}\)</span>, where <span class="math inline">\(\operatorname{det}^{\prime}\)</span> is the differential of <span class="math inline">\(\operatorname{det}\)</span>.</p>
+<p><strong>Lemma 2.</strong> For an invertible matrix <span class="math inline">\(\mathbf{A}\)</span>, we have: <span class="math inline">\(\operatorname{det}^{\prime}(\mathbf{A})(\mathbf{T})=\operatorname{det} \mathbf{A} \operatorname{tr}(\mathbf{A}^{-1}\mathbf{T}))\)</span></p>
+<hr />
+<p><span class="math display">\[\begin{equation}
+\tag{42}
+\partial(\operatorname{det}(\mathbf{X}))=\operatorname{det}(\mathbf{X}) \operatorname{Tr}\left(\mathbf{X}^{-1} \partial \mathbf{X}\right)
+\end{equation}\]</span></p>
+</div>
+</div>
 <div class="footnotes">
 <hr />
 <ol>
 <li id="fn1"><p><a href="https://math.stackexchange.com/questions/1471825/derivative-of-the-inverse-of-a-matrix" class="uri">https://math.stackexchange.com/questions/1471825/derivative-of-the-inverse-of-a-matrix</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><a href="https://en.wikipedia.org/wiki/Jacobi%27s_formula#Derivation" class="uri">https://en.wikipedia.org/wiki/Jacobi%27s_formula#Derivation</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
 

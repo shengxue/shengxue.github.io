@@ -17,12 +17,16 @@
       <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/2019-10-24-matrix-derivative/</guid>
-      <description>\[\begin{equation}\tag{40}\partial\left(\mathbf{X}^{-1}\right)=-\mathbf{X}^{-1}(\partial \mathbf{X}) \mathbf{X}^{-1}\end{equation}\]
-Explanation: 1\[\begin{equation}\underbrace{(I)^{\prime}}_{=0}=\left(\mathbf{X} \mathbf{X}^{-1}\right)^{\prime}=\mathbf{X}^{\prime} \mathbf{X}^{-1}+\mathbf{X}\left(\mathbf{X}^{-1}\right)^{\prime} \Rightarrow\end{equation}\]
+      <description>\[\begin{equation}\tag{40}\partial\left(\mathbf{X}^{-1}\right)=-\mathbf{X}^{-1}(\partial \mathbf{X}) \mathbf{X}^{-1}\end{equation}\]
+Explanation: 1
+\[\begin{equation}\underbrace{(I)^{\prime}}_{=0}=\left(\mathbf{X} \mathbf{X}^{-1}\right)^{\prime}=\mathbf{X}^{\prime} \mathbf{X}^{-1}+\mathbf{X}\left(\mathbf{X}^{-1}\right)^{\prime} \Rightarrow\end{equation}\]
 \[\begin{equation}\mathbf{X}\left(\mathbf{X}^{-1}\right)^{\prime}=-\mathbf{X}^{\prime} \mathbf{X}^{-1} \quad \Rightarrow\end{equation}\]
 \[\begin{equation}\left(\mathbf{X}^{-1}\right)^{\prime}=-\mathbf{X}^{-1} \mathbf{X}^{\prime} \mathbf{X}^{-1}\end{equation}\]
-https://math.stackexchange.com/questions/1471825/derivative-of-the-inverse-of-a-matrix↩
-</description>
+\[\begin{equation}\tag{41}\partial(\operatorname{det}(\mathbf{X}))=\operatorname{Tr}(\operatorname{adj}(\mathbf{X}) \partial \mathbf{X})\end{equation}\]
+BackgroundAdjugate MatrixThe adjugate of \(A\) is the transpose of the cofactor matrix \(C\) of \(X\),\[\begin{equation}\operatorname{adj}(\mathbf{X})=\mathbf{C}^{\top}\end{equation}\]
+and,\[\begin{equation}\mathbf{X}^{-1}=\operatorname{det}(\mathbf{X})^{-1} \operatorname{adj}(\mathbf{X}) \quad \Rightarrow\end{equation}\]
+\[\begin{equation}\operatorname{det}(\mathbf{X}) \mathbf{I} = \operatorname{adj}(\mathbf{X}) \mathbf{X}\end{equation}\]
+Characteristic PolynomialThe characteristic polynomial of a square matrix is a polynomial which is invariant under matrix similarity and has the eigenvalues as roots.</description>
     </item>
     
   </channel>
