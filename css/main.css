@@ -3789,7 +3789,8 @@ body {
   font-size: 1rem;
   line-height: 1.625;
   margin-bottom: 26px;
-  margin-bottom: 1.625rem; }
+  margin-bottom: 1.625rem; 
+  padding: 50px 200px;}
   .entry-content p > a,
   .entry-content li > a {
     border-bottom: 1px dotted rgba(162, 162, 162, 0.8); }
@@ -3812,6 +3813,10 @@ body {
   width: 100%;
   overflow: hidden;
   position: relative; }
+
+.entry-title {
+  padding: 50px 180px;
+}
 
 .header-title {
   text-align: center;
@@ -4009,7 +4014,7 @@ header .entry-meta {
     #post #disqus_thread,
     #page #disqus_thread {
       max-width: 1000px;
-      padding: 50px 200px;
+      padding: 50px 30px;
       margin: 0 auto 30px auto; } }
 #post .entry-meta,
 #page .entry-meta {
@@ -4056,7 +4061,7 @@ header .entry-meta {
   @media only screen and (min-width: 62.5em) {
     .read-more {
       max-width: 1000px;
-      padding: 50px 200px;
+      padding: 50px 30px;
       margin: 60px auto; } }
   .read-more:before, .read-more:after {
     display: table;
