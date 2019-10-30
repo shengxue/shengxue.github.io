@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Matrix on Runner</title>
+    <title>matrix on Runner</title>
     <link>/tags/matrix/</link>
-    <description>Recent content in Matrix on Runner</description>
+    <description>Recent content in matrix on Runner</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 24 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/matrix/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Matrix cookbook - Derivative of log of determinant</title>
+      <link>/posts/2019-10-30-matrix-cookbook-43/</link>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2019-10-30-matrix-cookbook-43/</guid>
+      <description>\[\begin{equation}\tag{43}\partial(\ln (\operatorname{det}(\mathbf{X})))=\operatorname{Tr}\left(\mathbf{X}^{-1} \partial \mathbf{X}\right)\end{equation}\]
+Lemma 1\[\begin{equation}\sum_{i} \sum_{j} \mathbf{A}^{\mathrm{T}}_{i j} \mathbf{B}_{i j} = \operatorname{Tr}\left(\mathbf{A} \mathbf{B}\right)\end{equation}\]
+Lemma 2\[\begin{equation}\frac{\partial(\operatorname{det} \mathbf{X})}{\partial \mathbf{X}_{i j}}=\mathbf{C}_{i j}\end{equation}\]
+</description>
+    </item>
     
     <item>
       <title>Matrix cookbook - Derivative</title>

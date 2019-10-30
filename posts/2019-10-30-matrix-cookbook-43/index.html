@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Matrix cookbook - Basics &#8211; Runner</title>
+<title>Matrix cookbook - Derivative of log of determinant &#8211; Runner</title>
 <meta name="description" content="">
 
     
 
-<meta name="keywords" content="matrix, cookbook">
+<meta name="keywords" content="matrix, derivative, determinant">
 
 
 
-<meta name="twitter:title" content="Matrix cookbook - Basics">
+<meta name="twitter:title" content="Matrix cookbook - Derivative of log of determinant">
 <meta name="twitter:description" content="Time and pressure ...">
 
 
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="Matrix cookbook - Basics">
+<meta property="og:title" content="Matrix cookbook - Derivative of log of determinant">
 <meta property="og:description" content="Time and pressure ...">
-<meta property="og:url" content="/posts/2019-10-10-matrix-cookbook/">
+<meta property="og:url" content="/posts/2019-10-30-matrix-cookbook-43/">
 <meta property="og:site_name" content="Runner">
 
 
 
-  <meta property="og:updated_time" content="2019-10-10T00:00:00&#43;00:00"/>
+  <meta property="og:updated_time" content="2019-10-30T00:00:00&#43;00:00"/>
 
 
 
@@ -37,7 +37,7 @@
 
 
 
-<link rel="canonical" href="/posts/2019-10-10-matrix-cookbook/">
+<link rel="canonical" href="/posts/2019-10-30-matrix-cookbook-43/">
 
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -119,10 +119,10 @@
     <header class="header-title">
       <div class="header-title-wrap">
         
-          <h1 class="entry-title"><a href="/posts/2019-10-10-matrix-cookbook/" rel="bookmark" title="Matrix cookbook - Basics">Matrix cookbook - Basics</a></h1>
+          <h1 class="entry-title"><a href="/posts/2019-10-30-matrix-cookbook-43/" rel="bookmark" title="Matrix cookbook - Derivative of log of determinant">Matrix cookbook - Derivative of log of determinant</a></h1>
         
          
-        <h2><span class="entry-date date published"><time datetime="2019-10-10 00:00:00 &#43;0000 UTC">October 10, 2019</time></span></h2>
+        <h2><span class="entry-date date published"><time datetime="2019-10-30 00:00:00 &#43;0000 UTC">October 30, 2019</time></span></h2>
         
       <p class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
@@ -134,42 +134,33 @@
       
 
 
-
 <p><span class="math display">\[\begin{equation}
-\tag{1}
-(\mathbf{A B})^{-1}=\mathbf{B}^{-1} \mathbf{A}^{-1}
+\tag{43}
+\partial(\ln (\operatorname{det}(\mathbf{X})))=\operatorname{Tr}\left(\mathbf{X}^{-1} \partial \mathbf{X}\right)
 \end{equation}\]</span></p>
+<div id="lemma-1" class="section level2">
+<h2>Lemma 1</h2>
 <p><span class="math display">\[\begin{equation}
-\tag{2}
-(\mathbf{A B C} \ldots)^{-1}=\ldots \mathbf{C}^{-1} \mathbf{B}^{-1} \mathbf{A}^{-1}
+\sum_{i} \sum_{j} \mathbf{A}^{\mathrm{T}}_{i j} \mathbf{B}_{i j} = \operatorname{Tr}\left(\mathbf{A} \mathbf{B}\right)
 \end{equation}\]</span></p>
+</div>
+<div id="lemma-2" class="section level2">
+<h2>Lemma 2</h2>
 <p><span class="math display">\[\begin{equation}
-\tag{3}
-\left(\mathbf{A}^{T}\right)^{-1}=\left(\mathbf{A}^{-1}\right)^{T}
+\frac{\partial(\operatorname{det} \mathbf{X})}{\partial \mathbf{X}_{i j}}=\mathbf{C}_{i j}
 \end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{4}
-(\mathbf{A}+\mathbf{B})^{T}=\mathbf{A}^{T}+\mathbf{B}^{T}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{5}
-(\mathbf{A B})^{T}=\mathbf{B}^{T} \mathbf{A}^{T}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{6}
-(\mathbf{A B C} \ldots)^{T}=\ldots \mathbf{C}^{T} \mathbf{B}^{T} \mathbf{A}^{T}
-\end{equation}\]</span></p>
+</div>
 
       <footer class="entry-meta">
           
-        <span class="entry-tags"><a href="/tags/#matrix" title="Pages tagged matrix" class="tag"><span class="term">matrix</span></a><a href="/tags/#cookbook" title="Pages tagged cookbook" class="tag"><span class="term">cookbook</span></a></span>
+        <span class="entry-tags"><a href="/tags/#matrix" title="Pages tagged matrix" class="tag"><span class="term">matrix</span></a><a href="/tags/#derivative" title="Pages tagged derivative" class="tag"><span class="term">derivative</span></a><a href="/tags/#determinant" title="Pages tagged determinant" class="tag"><span class="term">determinant</span></a></span>
         
         
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
-    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2f2019-10-10-matrix-cookbook%2f" target="_blank" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
-    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=%2fposts%2f2019-10-10-matrix-cookbook%2f" target="_blank" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
-    <li class="googleplus"><a href="https://plus.google.com/share?url=%2fposts%2f2019-10-10-matrix-cookbook%2f" target="_blank" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2f2019-10-30-matrix-cookbook-43%2f" target="_blank" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=%2fposts%2f2019-10-30-matrix-cookbook-43%2f" target="_blank" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=%2fposts%2f2019-10-30-matrix-cookbook-43%2f" target="_blank" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
   </ul>
 </div>
 

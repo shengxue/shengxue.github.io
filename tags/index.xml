@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Runner</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 24 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,16 +14,25 @@
     <item>
       <title>derivative</title>
       <link>/tags/derivative/</link>
-      <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/derivative/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Matrix</title>
+      <title>determinant</title>
+      <link>/tags/determinant/</link>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/determinant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>matrix</title>
       <link>/tags/matrix/</link>
-      <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/matrix/</guid>
       <description></description>
@@ -35,15 +44,6 @@
       <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/cookbook/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>determinant</title>
-      <link>/tags/determinant/</link>
-      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/determinant/</guid>
       <description></description>
     </item>
     
