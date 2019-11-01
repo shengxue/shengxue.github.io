@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Matrix cookbook - Derivative of log of determinant &#8211; Runner</title>
+<title>Derivative of log (det X) &#8211; Runner</title>
 <meta name="description" content="">
 
     
@@ -14,21 +14,21 @@
 
 
 
-<meta name="twitter:title" content="Matrix cookbook - Derivative of log of determinant">
+<meta name="twitter:title" content="Derivative of log (det X)">
 <meta name="twitter:description" content="Time and pressure ...">
 
 
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="Matrix cookbook - Derivative of log of determinant">
+<meta property="og:title" content="Derivative of log (det X)">
 <meta property="og:description" content="Time and pressure ...">
-<meta property="og:url" content="/posts/2019-10-30-matrix-cookbook-43/">
+<meta property="og:url" content="/posts/2019-11-01-test/">
 <meta property="og:site_name" content="Runner">
 
 
 
-  <meta property="og:updated_time" content="2019-10-30T00:00:00&#43;00:00"/>
+  <meta property="og:updated_time" content="2019-11-01T00:00:00&#43;00:00"/>
 
 
 
@@ -37,7 +37,7 @@
 
 
 
-<link rel="canonical" href="/posts/2019-10-30-matrix-cookbook-43/">
+<link rel="canonical" href="/posts/2019-11-01-test/">
 
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -129,10 +129,10 @@
     <header class="header-title">
       <div class="header-title-wrap">
         
-          <h1 class="entry-title"><a href="/posts/2019-10-30-matrix-cookbook-43/" rel="bookmark" title="Matrix cookbook - Derivative of log of determinant">Matrix cookbook - Derivative of log of determinant</a></h1>
+          <h1 class="entry-title"><a href="/posts/2019-11-01-test/" rel="bookmark" title="Derivative of log (det X)">Derivative of log (det X)</a></h1>
         
          
-        <h2><span class="entry-date date published"><time datetime="2019-10-30 00:00:00 &#43;0000 UTC">October 30, 2019</time></span></h2>
+        <h2><span class="entry-date date published"><time datetime="2019-11-01 00:00:00 &#43;0000 UTC">November 1, 2019</time></span></h2>
         
       <p class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
@@ -144,22 +144,8 @@
       
 
 
-<p><span class="math display">\[\begin{equation}
-\tag{43}
-\partial(\ln (\operatorname{det}(\mathbf{X})))=\operatorname{Tr}\left(\mathbf{X}^{-1} \partial \mathbf{X}\right)
-\end{equation}\]</span></p>
-<div id="lemma-1" class="section level2">
-<h2>Lemma 1</h2>
-<p><span class="math display">\[\begin{equation}
-\sum_{i} \sum_{j} \mathbf{A}^{\mathrm{T}}_{i j} \mathbf{B}_{i j} = \operatorname{Tr}\left(\mathbf{A} \mathbf{B}\right)
-\end{equation}\]</span></p>
-</div>
-<div id="lemma-2" class="section level2">
-<h2>Lemma 2</h2>
-<p><span class="math display">\[\begin{equation}
-\frac{\partial(\operatorname{det} \mathbf{X})}{\partial \mathbf{X}_{i j}}=\mathbf{C}_{i j}
-\end{equation}\]</span></p>
-</div>
+<p>(Here, we restrict the domain of the function to <span class="math inline">\(X\)</span> with positive determinant.) The most straightforward proof I know of this is direct computation: showing that the <span class="math inline">\(ij\)</span>th entry on the LHS is equal to that on the RHS. (An alternate proof is given in Section A.4.1 of Steven Boyd’s Convex Optimization.)</p>
+<p>Before we get there, we need to define some other terms. For a matrix <span class="math inline">\(X\)</span>,</p>
 
       <footer class="entry-meta">
           
@@ -168,9 +154,9 @@
         
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
-    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2f2019-10-30-matrix-cookbook-43%2f" target="_blank" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
-    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=%2fposts%2f2019-10-30-matrix-cookbook-43%2f" target="_blank" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
-    <li class="googleplus"><a href="https://plus.google.com/share?url=%2fposts%2f2019-10-30-matrix-cookbook-43%2f" target="_blank" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2f2019-11-01-test%2f" target="_blank" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=%2fposts%2f2019-11-01-test%2f" target="_blank" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=%2fposts%2f2019-11-01-test%2f" target="_blank" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
   </ul>
 </div>
 

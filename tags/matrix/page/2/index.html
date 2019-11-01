@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Matrix cookbook - Derivative of log of determinant &#8211; Runner</title>
+<title>matrix &#8211; Runner</title>
 <meta name="description" content="">
 
     
 
-<meta name="keywords" content="matrix, derivative, determinant">
 
 
 
-<meta name="twitter:title" content="Matrix cookbook - Derivative of log of determinant">
+
+<meta name="twitter:title" content="matrix">
 <meta name="twitter:description" content="Time and pressure ...">
 
 
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="Matrix cookbook - Derivative of log of determinant">
+<meta property="og:title" content="matrix">
 <meta property="og:description" content="Time and pressure ...">
-<meta property="og:url" content="/posts/2019-10-30-matrix-cookbook-43/">
+<meta property="og:url" content="/tags/matrix/">
 <meta property="og:site_name" content="Runner">
 
 
 
-  <meta property="og:updated_time" content="2019-10-30T00:00:00&#43;00:00"/>
+  <meta property="og:updated_time" content="2019-11-01T00:00:00&#43;00:00"/>
 
 
 
@@ -37,7 +37,9 @@
 
 
 
-<link rel="canonical" href="/posts/2019-10-30-matrix-cookbook-43/">
+<link rel="canonical" href="/tags/matrix/">
+<link href="/tags/matrix/index.xml" rel="alternate" type="application/rss+xml" title="Runner" />
+  <link href="/tags/matrix/index.xml" rel="feed" type="application/rss+xml" title="Runner" />
 
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -77,7 +79,7 @@
 
 </head>
 
-<body id="post" >
+<body id="post-index" >
 <nav id="dl-menu" class="dl-menuwrapper" role="navigation" style="display:inline-block">
 	<button class="dl-trigger">Open Menu</button>
 	<ul class="dl-menu">
@@ -122,81 +124,103 @@
 	</ul>
 </nav>
 
- 
+<div class="entry-header">
+  
+  <div class="header-title">
+    <div class="header-title-wrap">
+		<h1><a href="/" title="Go to the homepage">Runner</a></h1>
+	  <h2>
+            
+            
+              matrix
+            
+          </h2>
+    </div>
+  </div>
+</div>
 
 <div id="main" role="main">
-  <article class="hentry">
-    <header class="header-title">
-      <div class="header-title-wrap">
-        
-          <h1 class="entry-title"><a href="/posts/2019-10-30-matrix-cookbook-43/" rel="bookmark" title="Matrix cookbook - Derivative of log of determinant">Matrix cookbook - Derivative of log of determinant</a></h1>
-        
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
          
-        <h2><span class="entry-date date published"><time datetime="2019-10-30 00:00:00 &#43;0000 UTC">October 30, 2019</time></span></h2>
+		<span class="entry-date date published updated"><time datetime="2019-10-10 00:00:00 &#43;0000 UTC"><a href="/posts/2019-10-10-matrix-cookbook/">Oct 10, 2019</a></time></span>
         
-      <p class="entry-reading-time">
+      <span class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
         Reading time ~1 minute
-    </p>
-      </div>
-    </header>
-    <div class="entry-content">
-      
+      </span>
+    </div>
+    
+	<h1 class="entry-title"><a href="/posts/2019-10-10-matrix-cookbook/" rel="bookmark" title="Matrix cookbook - Basics" itemprop="url">Matrix cookbook - Basics</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    
+
 
 
 <p><span class="math display">\[\begin{equation}
-\tag{43}
-\partial(\ln (\operatorname{det}(\mathbf{X})))=\operatorname{Tr}\left(\mathbf{X}^{-1} \partial \mathbf{X}\right)
+\tag{1}
+(\mathbf{A B})^{-1}=\mathbf{B}^{-1} \mathbf{A}^{-1}
 \end{equation}\]</span></p>
-<div id="lemma-1" class="section level2">
-<h2>Lemma 1</h2>
 <p><span class="math display">\[\begin{equation}
-\sum_{i} \sum_{j} \mathbf{A}^{\mathrm{T}}_{i j} \mathbf{B}_{i j} = \operatorname{Tr}\left(\mathbf{A} \mathbf{B}\right)
+\tag{2}
+(\mathbf{A B C} \ldots)^{-1}=\ldots \mathbf{C}^{-1} \mathbf{B}^{-1} \mathbf{A}^{-1}
 \end{equation}\]</span></p>
-</div>
-<div id="lemma-2" class="section level2">
-<h2>Lemma 2</h2>
 <p><span class="math display">\[\begin{equation}
-\frac{\partial(\operatorname{det} \mathbf{X})}{\partial \mathbf{X}_{i j}}=\mathbf{C}_{i j}
+\tag{3}
+\left(\mathbf{A}^{T}\right)^{-1}=\left(\mathbf{A}^{-1}\right)^{T}
 \end{equation}\]</span></p>
-</div>
+<p><span class="math display">\[\begin{equation}
+\tag{4}
+(\mathbf{A}+\mathbf{B})^{T}=\mathbf{A}^{T}+\mathbf{B}^{T}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\tag{5}
+(\mathbf{A B})^{T}=\mathbf{B}^{T} \mathbf{A}^{T}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\tag{6}
+(\mathbf{A B C} \ldots)^{T}=\ldots \mathbf{C}^{T} \mathbf{B}^{T} \mathbf{A}^{T}
+\end{equation}\]</span></p>
 
-      <footer class="entry-meta">
-          
-        <span class="entry-tags"><a href="/tags/#matrix" title="Pages tagged matrix" class="tag"><span class="term">matrix</span></a><a href="/tags/#derivative" title="Pages tagged derivative" class="tag"><span class="term">derivative</span></a><a href="/tags/#determinant" title="Pages tagged determinant" class="tag"><span class="term">determinant</span></a></span>
-        
-        
-        <div class="social-share">
-  <ul class="socialcount socialcount-small inline-list">
-    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2f2019-10-30-matrix-cookbook-43%2f" target="_blank" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
-    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=%2fposts%2f2019-10-30-matrix-cookbook-43%2f" target="_blank" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
-    <li class="googleplus"><a href="https://plus.google.com/share?url=%2fposts%2f2019-10-30-matrix-cookbook-43%2f" target="_blank" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </div>
+</article>
+
+
+
+
+<div class="pagination">
+  <ul class="inline-list">
+	  
+    
+        <li><a href="/tags/matrix/" class="btn">Previous</a></li>
+    
+
+	
+
+	
+	
+    
+	<li><a href="/tags/matrix/">1</a></li>
+    
+	
+    
+	<li><strong class="current-page">2</strong></li>
+    
+	
+
+	
+
+	
+    
   </ul>
 </div>
 
-      </footer>
-    </div>
-    
-    <section id="disqus_thread"><div id="disqus_thread"></div>
-<script type="text/javascript">
 
-(function() {
-    
-    
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'algorithmist';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-    
-  </article>
 </div>
 
 <div class="footer-wrapper">
