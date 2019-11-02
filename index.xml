@@ -12,15 +12,19 @@
     
     
     <item>
-      <title>Matrix cookbook - Derivative of log of determinant</title>
+      <title>Derivative of log of determinant</title>
       <link>/posts/2019-10-30-matrix-cookbook-43/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/2019-10-30-matrix-cookbook-43/</guid>
-      <description>\[\begin{equation}\tag{43}\partial(\ln (\operatorname{det}(\mathbf{X})))=\operatorname{Tr}\left(\mathbf{X}^{-1} \partial \mathbf{X}\right)\end{equation}\]
-Lemma 1\[\begin{equation}\sum_{i} \sum_{j} \mathbf{A}^{\mathrm{T}}_{i j} \mathbf{B}_{i j} = \operatorname{Tr}\left(\mathbf{A} \mathbf{B}\right)\end{equation}\]
-Lemma 2\[\begin{equation}\frac{\partial(\operatorname{det} \mathbf{X})}{\partial \mathbf{X}_{i j}}=\mathbf{C}_{i j}\end{equation}\]
-</description>
+      <description>\[\begin{equation}\tag{43}\partial(\ln (\operatorname{det}(\mathbf{X})))=\operatorname{Tr}\left(\mathbf{X}^{-1} \partial \mathbf{X}\right)\end{equation}\]
+Lemma 1
+\[\begin{equation}\sum_{i} \sum_{j} \mathbf{A}^{\mathrm{T}}_{i j} \mathbf{B}_{i j} = \operatorname{Tr}\left(\mathbf{A} \mathbf{B}\right)\end{equation}\]
+Lemma 2 1
+(Credit to https://statisticaloddsandends.wordpress.com/2018/05/24/derivative-of-log-det-x/)
+\[\begin{equation}\frac{\partial(\operatorname{det} \mathbf{X})}{\partial \mathbf{X}_{i j}}=\mathbf{C}_{i j}\end{equation}\]
+For a matrix \(X\), we define some terms:
+The \((i,j)\) minor of \(X\), denoted \(M_{ij}\), is the determinant of the \((n-1) \times (n-1)\) matrix that remains after removing the \(i\)th row and \(j\)th column from \(X\).</description>
     </item>
     
     <item>

@@ -5,8 +5,9 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Matrix cookbook - Derivative of log of determinant &#8211; Runner</title>
-<meta name="description" content="">
+<title>Derivative of log of determinant &#8211; Runner</title>
+<meta name="description" content="Matrix cookbook
+">
 
     
 
@@ -14,15 +15,17 @@
 
 
 
-<meta name="twitter:title" content="Matrix cookbook - Derivative of log of determinant">
-<meta name="twitter:description" content="Time and pressure ...">
+<meta name="twitter:title" content="Derivative of log of determinant">
+<meta name="twitter:description" content="Matrix cookbook
+">
 
 
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="Matrix cookbook - Derivative of log of determinant">
-<meta property="og:description" content="Time and pressure ...">
+<meta property="og:title" content="Derivative of log of determinant">
+<meta property="og:description" content="Matrix cookbook
+">
 <meta property="og:url" content="/posts/2019-10-30-matrix-cookbook-43/">
 <meta property="og:site_name" content="Runner">
 
@@ -129,14 +132,14 @@
     <header class="header-title">
       <div class="header-title-wrap">
         
-          <h1 class="entry-title"><a href="/posts/2019-10-30-matrix-cookbook-43/" rel="bookmark" title="Matrix cookbook - Derivative of log of determinant">Matrix cookbook - Derivative of log of determinant</a></h1>
+          <h1 class="entry-title"><a href="/posts/2019-10-30-matrix-cookbook-43/" rel="bookmark" title="Derivative of log of determinant">Derivative of log of determinant</a></h1>
         
          
         <h2><span class="entry-date date published"><time datetime="2019-10-30 00:00:00 &#43;0000 UTC">October 30, 2019</time></span></h2>
         
       <p class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
-        Reading time ~1 minute
+        Reading time ~2 minutes
     </p>
       </div>
     </header>
@@ -148,17 +151,53 @@
 \tag{43}
 \partial(\ln (\operatorname{det}(\mathbf{X})))=\operatorname{Tr}\left(\mathbf{X}^{-1} \partial \mathbf{X}\right)
 \end{equation}\]</span></p>
-<div id="lemma-1" class="section level2">
-<h2>Lemma 1</h2>
+<p><strong>Lemma 1</strong></p>
 <p><span class="math display">\[\begin{equation}
 \sum_{i} \sum_{j} \mathbf{A}^{\mathrm{T}}_{i j} \mathbf{B}_{i j} = \operatorname{Tr}\left(\mathbf{A} \mathbf{B}\right)
 \end{equation}\]</span></p>
-</div>
-<div id="lemma-2" class="section level2">
-<h2>Lemma 2</h2>
+<p><strong>Lemma 2</strong> <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>(Credit to <a href="https://statisticaloddsandends.wordpress.com/2018/05/24/derivative-of-log-det-x/" class="uri">https://statisticaloddsandends.wordpress.com/2018/05/24/derivative-of-log-det-x/</a>)</p>
 <p><span class="math display">\[\begin{equation}
 \frac{\partial(\operatorname{det} \mathbf{X})}{\partial \mathbf{X}_{i j}}=\mathbf{C}_{i j}
 \end{equation}\]</span></p>
+<p>For a matrix <span class="math inline">\(X\)</span>, we define some terms:</p>
+<ul>
+<li><p>The <span class="math inline">\((i,j)\)</span> minor of <span class="math inline">\(X\)</span>, denoted <span class="math inline">\(M_{ij}\)</span>, is the determinant of the <span class="math inline">\((n-1) \times (n-1)\)</span> matrix that remains after removing the <span class="math inline">\(i\)</span>th row and <span class="math inline">\(j\)</span>th column from <span class="math inline">\(X\)</span>.</p></li>
+<li><p>The cofactor matrix of <span class="math inline">\(X\)</span>, denoted <span class="math inline">\(C\)</span>, is an <span class="math inline">\(n \times n\)</span> matrix such that <span class="math inline">\(C_{ij} = (-1)^{i+j} M_{ij}\)</span>.</p></li>
+<li><p>The adjugate matrix of <span class="math inline">\(X\)</span>, denoted <span class="math inline">\(\operatorname{adj } X\)</span>, is simply the transpose of <span class="math inline">\(C\)</span>.</p></li>
+</ul>
+<p>These terms are useful because they related to both matrix determinants and inverses. If <span class="math inline">\(X\)</span> is invertible, then <span class="math inline">\(X^{-1}=\frac{1}{\operatorname{det} X}(\operatorname{adj} X)\)</span>, so</p>
+<p><span class="math display">\[\begin{equation}
+\left(\textbf{X}^{-1}\right)^T_{ij} = \frac{1}{\operatorname{det} X} C_{ij}
+\end{equation}\]</span></p>
+<p>On the other hand, by the cofactor expansion of the determinant, <span class="math inline">\(\det X=\,\,\underset{k=1}{\overset{n}{\varSigma}}X_{ik}C_{ik}\)</span>, so by the product rule,</p>
+<p><span class="math display">\[
+\frac{\partial \left( \det  X \right)}{\partial X_{ij}}=\,\,\underset{k=1}{\overset{n}{\varSigma}}\frac{\partial X_{ik}}{\partial X_{ij}}C_{ik}\,\,+\,\,\underset{k=1}{\overset{n}{\varSigma}}X_{ik}\frac{\partial C_{ik}}{\partial X_{ij}}
+\]</span></p>
+<p>If <span class="math inline">\(k \neq j\)</span>, then <span class="math inline">\(\dfrac{\partial X_{ik}}{\partial X_{ij}} = 0\)</span>, otherwise it is equal to 1. This means that the first term above reduces to <span class="math inline">\(C_{ij}\)</span>. For any <span class="math inline">\(k\)</span>, the elements of <span class="math inline">\(X\)</span> which affect <span class="math inline">\(C_{ik}\)</span> are those which do not lie on row <span class="math inline">\(i\)</span> or column <span class="math inline">\(k\)</span>. Hence, <span class="math inline">\(\dfrac{\partial C_{ik}}{\partial X_{ij}} = 0\)</span> for all k! So,</p>
+<p><span class="math display">\[\frac{\partial \left( \det  X \right)}{\partial X_{ij}}=C_{ij}\]</span></p>
+<p><strong>Proof</strong></p>
+<p>Putting all this together with an application of the chain rule, we get</p>
+<p><span class="math display">\[\left(\ln (\det X)\right)_{ij}&#39; = \dfrac{1}{\det X} \dfrac{\partial (\det X)}{\partial X_{ij}} = \dfrac{1}{\det X} C_{ij} = (X^{-1})^T_{ij}\]</span></p>
+<p>So,</p>
+<p><span class="math display">\[\begin{align}
+\partial(\ln (\operatorname{det}(\mathbf{X})))&amp;=\sum_{i} \sum_{j} \left(\ln (\det X)\right)_{ij}&#39; d_{ij} \\
+&amp;= \sum_{i} \sum_{j}(\mathbf{X}^{-1})^T_{ij} d_{ij} \\
+&amp;= \operatorname{Tr}\left(\mathbf{X}^{-1} \partial \mathbf{X}\right)
+\end{align}\]</span></p>
+<p>where
+<span class="math display">\[
+\partial X=\left( \begin{matrix}{}
+    dX_{11}&amp;        \cdots&amp;     dX_{1n}\\
+    \vdots&amp;     \ddots&amp;     \vdots\\
+    dX_{n1}&amp;        \cdots&amp;     dX_{nn}\\
+\end{matrix} \right) 
+\]</span></p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://statisticaloddsandends.wordpress.com/2018/05/24/derivative-of-log-det-x/" class="uri">https://statisticaloddsandends.wordpress.com/2018/05/24/derivative-of-log-det-x/</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
 </div>
 
       <footer class="entry-meta">
