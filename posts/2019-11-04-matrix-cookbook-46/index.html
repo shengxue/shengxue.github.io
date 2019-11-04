@@ -5,25 +5,25 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>matrix &#8211; Runner</title>
+<title>Jacobi&#39;s formula &#8211; Runner</title>
 <meta name="description" content="">
 
     
 
+<meta name="keywords" content="matrix, derivative, determinant">
 
 
 
-
-<meta name="twitter:title" content="matrix">
+<meta name="twitter:title" content="Jacobi&#39;s formula">
 <meta name="twitter:description" content="Time and pressure ...">
 
 
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="matrix">
+<meta property="og:title" content="Jacobi&#39;s formula">
 <meta property="og:description" content="Time and pressure ...">
-<meta property="og:url" content="/tags/matrix/">
+<meta property="og:url" content="/posts/2019-11-04-matrix-cookbook-46/">
 <meta property="og:site_name" content="Runner">
 
 
@@ -37,9 +37,7 @@
 
 
 
-<link rel="canonical" href="/tags/matrix/">
-<link href="/tags/matrix/index.xml" rel="alternate" type="application/rss+xml" title="Runner" />
-  <link href="/tags/matrix/index.xml" rel="feed" type="application/rss+xml" title="Runner" />
+<link rel="canonical" href="/posts/2019-11-04-matrix-cookbook-46/">
 
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -79,7 +77,7 @@
 
 </head>
 
-<body id="post-index" >
+<body id="post" >
 <nav id="dl-menu" class="dl-menuwrapper" role="navigation" style="display:inline-block">
 	<button class="dl-trigger">Open Menu</button>
 	<ul class="dl-menu">
@@ -124,103 +122,91 @@
 	</ul>
 </nav>
 
-<div class="entry-header">
-  
-  <div class="header-title">
-    <div class="header-title-wrap">
-		<h1><a href="/" title="Go to the homepage">Runner</a></h1>
-	  <h2>
-            
-            
-              matrix
-            
-          </h2>
-    </div>
-  </div>
-</div>
+ 
 
 <div id="main" role="main">
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-         
-		<span class="entry-date date published updated"><time datetime="2019-10-10 00:00:00 &#43;0000 UTC"><a href="/posts/2019-10-10-matrix-cookbook/">Oct 10, 2019</a></time></span>
+  <article class="hentry">
+    <header class="header-title">
+      <div class="header-title-wrap">
         
-      <span class="entry-reading-time">
+          <h1 class="entry-title"><a href="/posts/2019-11-04-matrix-cookbook-46/" rel="bookmark" title="Jacobi&#39;s formula">Jacobi&#39;s formula</a></h1>
+        
+         
+        <h2><span class="entry-date date published"><time datetime="2019-11-04 00:00:00 &#43;0000 UTC">November 4, 2019</time></span></h2>
+        
+      <p class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
         Reading time ~1 minute
-      </span>
-    </div>
-    
-	<h1 class="entry-title"><a href="/posts/2019-10-10-matrix-cookbook/" rel="bookmark" title="Matrix cookbook - Basics" itemprop="url">Matrix cookbook - Basics</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
+    </p>
+      </div>
+    </header>
+    <div class="entry-content">
+      
 
 
+<p class="boxed">
+<span class="math display">\[
+\tag{46}
+\frac{\partial  \det \left( \mathbf{Y} \right)}{\partial x}=\,\,\det \left( \mathbf{Y} \right) Tr\left[ \mathbf{Y}^{-1}\frac{\partial \mathbf{Y}}{\partial x} \right] 
+\]</span>
+</p>
+<p>Formula <span class="math inline">\((46)\)</span> is actually Jacobi’s formula. <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p><strong>Analogy in functions</strong></p>
+<p>For a differentiable function <span class="math inline">\(f: D\subseteq R\rightarrow R\)</span>, for all <span class="math inline">\(x\)</span> in some neighborhood of <span class="math inline">\(a\)</span>, <span class="math inline">\(f\)</span> can be written as: <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>
+<span class="math display">\[f(x)=f(a)+f^{\prime}(a) (x−a)+R(x−a) \]</span>
+and, <span class="math inline">\(L(x)=f(a)+f^{\prime}(a)(x−a)\)</span> is the best affine approximation of the function <span class="math inline">\(f\)</span> at <span class="math inline">\(a\)</span>.</p>
+<p>or, the idea could be expressed in other way:
+<span class="math display">\[f(x+\epsilon)=f(x)+f^{\prime}(x) \epsilon +R\epsilon \]</span></p>
+<p>It comes from <strong>Taylor aproximation</strong> at <span class="math inline">\(x+\epsilon\)</span>:
+<span class="math display">\[f(x+\epsilon)=f(x)+f^{\prime}(x) \epsilon +f^{\prime\prime}(x) \epsilon^2 /2 + \cdots  \]</span></p>
+<p><strong>Proof</strong></p>
+<p><span class="math inline">\(det\)</span> is a function <span class="math inline">\(M_{n×n}→R\)</span> where <span class="math inline">\(M_{n×n}\)</span> is the space of <span class="math inline">\(n×n\)</span> square matrices. Therefore, a matrix is the equivalent of a point for real functions. The best linear approximation to <span class="math inline">\(det\)</span> near the identity is given by:
+<span class="math display">\[det(\mathbf{I}+\mathbf{M})=det(\mathbf{I})+d(det(\mathbf{I}))M+R(\mathbf{I},\mathbf{M})\]</span>
+<span class="math display">\[\underset{|\epsilon |\rightarrow 0}{lim}\frac{R\left( x_0, \varepsilon \right)}{|\epsilon |}=0\]</span></p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://en.wikipedia.org/wiki/Jacobi%27s_formula">Jacobi’s formula</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><a href="https://math.stackexchange.com/questions/1784262/how-is-the-derivative-truly-literally-the-best-linear-approximation-near-a-po">Best affine approximation</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
 
-<p><span class="math display">\[\begin{equation}
-\tag{1}
-(\mathbf{A B})^{-1}=\mathbf{B}^{-1} \mathbf{A}^{-1}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{2}
-(\mathbf{A B C} \ldots)^{-1}=\ldots \mathbf{C}^{-1} \mathbf{B}^{-1} \mathbf{A}^{-1}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{3}
-\left(\mathbf{A}^{T}\right)^{-1}=\left(\mathbf{A}^{-1}\right)^{T}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{4}
-(\mathbf{A}+\mathbf{B})^{T}=\mathbf{A}^{T}+\mathbf{B}^{T}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{5}
-(\mathbf{A B})^{T}=\mathbf{B}^{T} \mathbf{A}^{T}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{6}
-(\mathbf{A B C} \ldots)^{T}=\ldots \mathbf{C}^{T} \mathbf{B}^{T} \mathbf{A}^{T}
-\end{equation}\]</span></p>
-
-  </div>
-</article>
-
-
-
-
-<div class="pagination">
-  <ul class="inline-list">
-	  
-    
-        <li><a href="/tags/matrix/" class="btn">Previous</a></li>
-    
-
-	
-
-	
-	
-    
-	<li><a href="/tags/matrix/">1</a></li>
-    
-	
-    
-	<li><strong class="current-page">2</strong></li>
-    
-	
-
-	
-
-	
-    
+      <footer class="entry-meta">
+          
+        <span class="entry-tags"><a href="/tags/#matrix" title="Pages tagged matrix" class="tag"><span class="term">matrix</span></a><a href="/tags/#derivative" title="Pages tagged derivative" class="tag"><span class="term">derivative</span></a><a href="/tags/#determinant" title="Pages tagged determinant" class="tag"><span class="term">determinant</span></a></span>
+        
+        
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2f2019-11-04-matrix-cookbook-46%2f" target="_blank" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=%2fposts%2f2019-11-04-matrix-cookbook-46%2f" target="_blank" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=%2fposts%2f2019-11-04-matrix-cookbook-46%2f" target="_blank" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
   </ul>
 </div>
 
+      </footer>
+    </div>
+    
+    <section id="disqus_thread"><div id="disqus_thread"></div>
+<script type="text/javascript">
 
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'algorithmist';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+    
+  </article>
 </div>
 
 <div class="footer-wrapper">

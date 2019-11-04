@@ -6,10 +6,22 @@
     <description>Recent content on Runner</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Jacobi&#39;s formula</title>
+      <link>/posts/2019-11-04-matrix-cookbook-46/</link>
+      <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2019-11-04-matrix-cookbook-46/</guid>
+      <description>\[\tag{46}\frac{\partial \det \left( \mathbf{Y} \right)}{\partial x}=\,\,\det \left( \mathbf{Y} \right) Tr\left[ \mathbf{Y}^{-1}\frac{\partial \mathbf{Y}}{\partial x} \right] \]Formula \((46)\) is actually Jacobi’s formula. 1
+Analogy in functions
+For a differentiable function \(f: D\subseteq R\rightarrow R\), for all \(x\) in some neighborhood of \(a\), \(f\) can be written as: 2\[f(x)=f(a)+f^{\prime}(a) (x−a)+R(x−a) \]and, \(L(x)=f(a)+f^{\prime}(a)(x−a)\) is the best affine approximation of the function \(f\) at \(a\).
+or, the idea could be expressed in other way:\[f(x+\epsilon)=f(x)+f^{\prime}(x) \epsilon +R\epsilon \]</description>
+    </item>
     
     <item>
       <title>Derivative of log of determinant</title>

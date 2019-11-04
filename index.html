@@ -37,7 +37,7 @@
     <meta property="og:image" content="/images/geiranger-1508630_1920.jpg" />
 
 
-  <meta property="og:updated_time" content="2019-10-30T00:00:00&#43;00:00"/>
+  <meta property="og:updated_time" content="2019-11-04T00:00:00&#43;00:00"/>
 
 
 
@@ -152,6 +152,56 @@
 </div>
 
 <div id="main" role="main">
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+         
+		<span class="entry-date date published updated"><time datetime="2019-11-04 00:00:00 &#43;0000 UTC"><a href="/posts/2019-11-04-matrix-cookbook-46/">Nov 4, 2019</a></time></span>
+        
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        Reading time ~1 minute
+      </span>
+    </div>
+    
+	<h1 class="entry-title"><a href="/posts/2019-11-04-matrix-cookbook-46/" rel="bookmark" title="Jacobi&#39;s formula" itemprop="url">Jacobi&#39;s formula</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    
+
+
+<p class="boxed">
+<span class="math display">\[
+\tag{46}
+\frac{\partial  \det \left( \mathbf{Y} \right)}{\partial x}=\,\,\det \left( \mathbf{Y} \right) Tr\left[ \mathbf{Y}^{-1}\frac{\partial \mathbf{Y}}{\partial x} \right] 
+\]</span>
+</p>
+<p>Formula <span class="math inline">\((46)\)</span> is actually Jacobi’s formula. <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p><strong>Analogy in functions</strong></p>
+<p>For a differentiable function <span class="math inline">\(f: D\subseteq R\rightarrow R\)</span>, for all <span class="math inline">\(x\)</span> in some neighborhood of <span class="math inline">\(a\)</span>, <span class="math inline">\(f\)</span> can be written as: <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>
+<span class="math display">\[f(x)=f(a)+f^{\prime}(a) (x−a)+R(x−a) \]</span>
+and, <span class="math inline">\(L(x)=f(a)+f^{\prime}(a)(x−a)\)</span> is the best affine approximation of the function <span class="math inline">\(f\)</span> at <span class="math inline">\(a\)</span>.</p>
+<p>or, the idea could be expressed in other way:
+<span class="math display">\[f(x+\epsilon)=f(x)+f^{\prime}(x) \epsilon +R\epsilon \]</span></p>
+<p>It comes from <strong>Taylor aproximation</strong> at <span class="math inline">\(x+\epsilon\)</span>:
+<span class="math display">\[f(x+\epsilon)=f(x)+f^{\prime}(x) \epsilon +f^{\prime\prime}(x) \epsilon^2 /2 + \cdots  \]</span></p>
+<p><strong>Proof</strong></p>
+<p><span class="math inline">\(det\)</span> is a function <span class="math inline">\(M_{n×n}→R\)</span> where <span class="math inline">\(M_{n×n}\)</span> is the space of <span class="math inline">\(n×n\)</span> square matrices. Therefore, a matrix is the equivalent of a point for real functions. The best linear approximation to <span class="math inline">\(det\)</span> near the identity is given by:
+<span class="math display">\[det(\mathbf{I}+\mathbf{M})=det(\mathbf{I})+d(det(\mathbf{I}))M+R(\mathbf{I},\mathbf{M})\]</span>
+<span class="math display">\[\underset{|\epsilon |\rightarrow 0}{lim}\frac{R\left( x_0, \varepsilon \right)}{|\epsilon |}=0\]</span></p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://en.wikipedia.org/wiki/Jacobi%27s_formula">Jacobi’s formula</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><a href="https://math.stackexchange.com/questions/1784262/how-is-the-derivative-truly-literally-the-best-linear-approximation-near-a-po">Best affine approximation</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+
+  </div>
+</article>
 
 <article class="hentry">
   <header>
@@ -500,55 +550,6 @@ They are the same quantity, up to renaming indices <span class="math inline">\((
 <li id="fn3"><p><a href="https://math.stackexchange.com/questions/1314142/trace-of-ab-trace-of-ba/1314150" class="uri">https://math.stackexchange.com/questions/1314142/trace-of-ab-trace-of-ba/1314150</a><a href="#fnref3" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
-
-  </div>
-</article>
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-         
-		<span class="entry-date date published updated"><time datetime="2019-10-10 00:00:00 &#43;0000 UTC"><a href="/posts/2019-10-10-matrix-cookbook/">Oct 10, 2019</a></time></span>
-        
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        Reading time ~1 minute
-      </span>
-    </div>
-    
-	<h1 class="entry-title"><a href="/posts/2019-10-10-matrix-cookbook/" rel="bookmark" title="Matrix cookbook - Basics" itemprop="url">Matrix cookbook - Basics</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
-
-
-
-<p><span class="math display">\[\begin{equation}
-\tag{1}
-(\mathbf{A B})^{-1}=\mathbf{B}^{-1} \mathbf{A}^{-1}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{2}
-(\mathbf{A B C} \ldots)^{-1}=\ldots \mathbf{C}^{-1} \mathbf{B}^{-1} \mathbf{A}^{-1}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{3}
-\left(\mathbf{A}^{T}\right)^{-1}=\left(\mathbf{A}^{-1}\right)^{T}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{4}
-(\mathbf{A}+\mathbf{B})^{T}=\mathbf{A}^{T}+\mathbf{B}^{T}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{5}
-(\mathbf{A B})^{T}=\mathbf{B}^{T} \mathbf{A}^{T}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\tag{6}
-(\mathbf{A B C} \ldots)^{T}=\ldots \mathbf{C}^{T} \mathbf{B}^{T} \mathbf{A}^{T}
-\end{equation}\]</span></p>
 
   </div>
 </article>
