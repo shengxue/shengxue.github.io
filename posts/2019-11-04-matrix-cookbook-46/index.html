@@ -136,7 +136,7 @@
         
       <p class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
-        Reading time ~1 minute
+        Reading time ~2 minutes
     </p>
       </div>
     </header>
@@ -159,6 +159,32 @@ and, <span class="math inline">\(L(x)=f(a)+f^{\prime}(a)(x−a)\)</span> is the 
 <span class="math display">\[f(x+\epsilon)=f(x)+f^{\prime}(x) \epsilon +R\epsilon \]</span></p>
 <p>It comes from <strong>Taylor aproximation</strong> at <span class="math inline">\(x+\epsilon\)</span>:
 <span class="math display">\[f(x+\epsilon)=f(x)+f^{\prime}(x) \epsilon +f^{\prime\prime}(x) \epsilon^2 /2 + \cdots  \]</span></p>
+<p><strong>Lemma1</strong> <a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<p class="boxed">
+<span class="math display">\[
+\det \left( \mathbf{I}+\epsilon \mathbf{A} \right) =\,\,1+\epsilon Tr\left( \mathbf{A} \right) +O\left( \epsilon^2 \right) 
+\]</span>
+</p>
+<p>Let <span class="math inline">\(A_1,A_2, \cdot,A_N\)</span> be the column vectors of the matrix <span class="math inline">\(A\)</span>. Let <span class="math inline">\(e_1,e_2, \cdot,e_N\)</span> be the standard basis; note that these basis vectors form the columns of the identity matrix <span class="math inline">\(I\)</span>. Then we recall that the determinant is an alternating multi-linear map on the column space.</p>
+<p><span class="math display">\[det(I+ϵA)=det(e_1+ϵA_1,e_2+ϵA_2,…,e_N+ϵA_N) \\
+=det(e_1,e_2,…,e_N)+\epsilon \left\{ det(A_1,e_2,…,e_N)+det(e_1,A_2,…,e_N) +\cdots \\
+ +det(e_1,e_2,…,A_N) \right\} + O(\epsilon^2)\]</span></p>
+<p>The first term is just the determinant of the identity matrix which is 1. The term proportional to ϵ is a sum of expressions like <span class="math inline">\(det(e_1,e_2,…,A_j,…,e_N)\)</span> where the j’th column of the identity matrix is replaced with the j’th column of A. Expanding the determinant along the j’th row we see that <span class="math inline">\(det(e_1,e_2,…,A_j,…,e_N)=A_{jj}\)</span>.</p>
+<p><span class="math display">\[det(I+ϵA)=1+ϵ\sum_{j=1}^N A_{jj}+O(ϵ^2)=1+ϵTr(A)+O(ϵ^2)\]</span></p>
+<p>Particulary when <span class="math inline">\(n=2\)</span>,
+<span class="math display">\[\begin{align}
+\det \left( I+\epsilon A \right) &amp;=\det \left( \begin{matrix}{}
+    1+\varepsilon a_{11}&amp;       \varepsilon a_{12}\\
+    \varepsilon a_{21}&amp;     1+\varepsilon a_{22}\\
+\end{matrix} \right) \,\, \\
+&amp;=\,\,1+\varepsilon \left( a_{11}+a_{22} \right) +\varepsilon ^2\left( a_{11}a_{22}-a_{12}a_{21} \right) \,\,\\
+&amp;=\,\,1+\varepsilon Tr\left( A \right) +\varepsilon ^2\det \left( A \right) 
+\end{align}\]</span></p>
+<p><strong>Lemma 2</strong>. <a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<p class="boxed">
+<span class="math display">\[ det^{\prime}(I)=\mathrm {Tr} \]</span>
+</p>
+<p>where <span class="math inline">\(det^{\prime}(I)=Tr\)</span> is the differential of <span class="math inline">\({\displaystyle \det }\)</span>.</p>
 <p><strong>Proof</strong></p>
 <p><span class="math inline">\(det\)</span> is a function <span class="math inline">\(M_{n×n}→R\)</span> where <span class="math inline">\(M_{n×n}\)</span> is the space of <span class="math inline">\(n×n\)</span> square matrices. Therefore, a matrix is the equivalent of a point for real functions. The best linear approximation to <span class="math inline">\(det\)</span> near the identity is given by:
 <span class="math display">\[det(\mathbf{I}+\mathbf{M})=det(\mathbf{I})+d(det(\mathbf{I}))M+R(\mathbf{I},\mathbf{M})\]</span>
@@ -168,6 +194,8 @@ and, <span class="math inline">\(L(x)=f(a)+f^{\prime}(a)(x−a)\)</span> is the 
 <ol>
 <li id="fn1"><p><a href="https://en.wikipedia.org/wiki/Jacobi%27s_formula">Jacobi’s formula</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
 <li id="fn2"><p><a href="https://math.stackexchange.com/questions/1784262/how-is-the-derivative-truly-literally-the-best-linear-approximation-near-a-po">Best affine approximation</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p><a href="https://math.stackexchange.com/questions/1174639/series-expansion-of-the-determinant-for-a-matrix-near-the-identity">Determinant for a matrix near the identity</a><a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p><a href="https://en.wikipedia.org/wiki/Jacobi%27s_formula">Jacobi’s formula</a><a href="#fnref4" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
 
