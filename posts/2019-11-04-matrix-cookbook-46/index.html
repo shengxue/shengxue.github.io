@@ -136,7 +136,7 @@
         
       <p class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
-        Reading time ~2 minutes
+        Reading time ~3 minutes
     </p>
       </div>
     </header>
@@ -171,7 +171,7 @@ and, <span class="math inline">\(L(x)=f(a)+f^{\prime}(a)(x−a)\)</span> is the 
  +det(e_1,e_2,…,A_N) \right\} + O(\epsilon^2)\]</span></p>
 <p>The first term is just the determinant of the identity matrix which is 1. The term proportional to ϵ is a sum of expressions like <span class="math inline">\(det(e_1,e_2,…,A_j,…,e_N)\)</span> where the j’th column of the identity matrix is replaced with the j’th column of A. Expanding the determinant along the j’th row we see that <span class="math inline">\(det(e_1,e_2,…,A_j,…,e_N)=A_{jj}\)</span>.</p>
 <p><span class="math display">\[det(I+ϵA)=1+ϵ\sum_{j=1}^N A_{jj}+O(ϵ^2)=1+ϵTr(A)+O(ϵ^2)\]</span></p>
-<p>Particulary when <span class="math inline">\(n=2\)</span>,
+<p>Particularly when <span class="math inline">\(n=2\)</span>,
 <span class="math display">\[\begin{align}
 \det \left( I+\epsilon A \right) &amp;=\det \left( \begin{matrix}{}
     1+\varepsilon a_{11}&amp;       \varepsilon a_{12}\\
@@ -184,11 +184,24 @@ and, <span class="math inline">\(L(x)=f(a)+f^{\prime}(a)(x−a)\)</span> is the 
 <p class="boxed">
 <span class="math display">\[ det^{\prime}(I)=\mathrm {Tr} \]</span>
 </p>
-<p>where <span class="math inline">\(det^{\prime}(I)=Tr\)</span> is the differential of <span class="math inline">\({\displaystyle \det }\)</span>.</p>
-<p><strong>Proof</strong></p>
+<p>where <span class="math inline">\(det^{\prime}(I)=Tr\)</span> is the differential of <span class="math inline">\({\displaystyle \det }\)</span></p>
+<p>This equation means that the differential of <span class="math inline">\({\displaystyle \det }\)</span>, evaluated at the identity matrix, is equal to the trace. The differential <span class="math inline">\({\displaystyle \det &#39;(I)}\)</span> is a linear operator that maps an n × n matrix to a real number.</p>
+<p>Using the definition of a directional derivative together with one of its basic properties for differentiable functions, we have
+<span class="math display">\[\begin{equation}
+ \operatorname{det}^{\prime}(I)(T)=\nabla_{T} \operatorname{det}(I)=\lim _{\varepsilon \rightarrow 0} \frac{\operatorname{det}(I+\varepsilon T)-\operatorname{det} I}{\varepsilon} \\
+ = lim_{\varepsilon \rightarrow 0} \frac{1+ϵTr(T)+O(ϵ^2)-1}{\varepsilon} \\
+ = Tr(T)
+\end{equation}\]</span></p>
+<p><em>Alternative proof of lemma 2</em>: <a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
 <p><span class="math inline">\(det\)</span> is a function <span class="math inline">\(M_{n×n}→R\)</span> where <span class="math inline">\(M_{n×n}\)</span> is the space of <span class="math inline">\(n×n\)</span> square matrices. Therefore, a matrix is the equivalent of a point for real functions. The best linear approximation to <span class="math inline">\(det\)</span> near the identity is given by:
 <span class="math display">\[det(\mathbf{I}+\mathbf{M})=det(\mathbf{I})+d(det(\mathbf{I}))M+R(\mathbf{I},\mathbf{M})\]</span>
-<span class="math display">\[\underset{|\epsilon |\rightarrow 0}{lim}\frac{R\left( x_0, \varepsilon \right)}{|\epsilon |}=0\]</span></p>
+<span class="math display">\[\underset{||\mathbf{M} ||\rightarrow 0}{lim}\frac{R(\mathbf{I},\mathbf{M})}{||\mathbf{M} ||}=0\]</span></p>
+<p><span class="math inline">\(det^{\prime}(I)=\mathrm {Tr}\)</span> is equivalent to the following:</p>
+<p class="boxed">
+<span class="math display">\[\begin{equation}
+ \left.\frac{\mathrm{d}}{\mathrm{d} t}[\operatorname{det}(\mathbf{I}+t \mathbf{B})]\right|_{t=0}=\operatorname{Tr}(\mathbf{B}) 
+\end{equation}\]</span>
+</p>
 <div class="footnotes">
 <hr />
 <ol>
@@ -196,6 +209,7 @@ and, <span class="math inline">\(L(x)=f(a)+f^{\prime}(a)(x−a)\)</span> is the 
 <li id="fn2"><p><a href="https://math.stackexchange.com/questions/1784262/how-is-the-derivative-truly-literally-the-best-linear-approximation-near-a-po">Best affine approximation</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
 <li id="fn3"><p><a href="https://math.stackexchange.com/questions/1174639/series-expansion-of-the-determinant-for-a-matrix-near-the-identity">Determinant for a matrix near the identity</a><a href="#fnref3" class="footnote-back">↩</a></p></li>
 <li id="fn4"><p><a href="https://en.wikipedia.org/wiki/Jacobi%27s_formula">Jacobi’s formula</a><a href="#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn5"><p><a href="https://math.stackexchange.com/questions/2393932/lemma-for-jacobis-formula-proof">Lemma for jocobi’s formula proof</a><a href="#fnref5" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
 
