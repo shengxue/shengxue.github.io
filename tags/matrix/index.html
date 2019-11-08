@@ -226,7 +226,12 @@ For an invertible matrix <span class="math inline">\(A\)</span>, we have:
  \operatorname{det}^{\prime}(A)(T)=\operatorname{det} A \operatorname{tr}\left(A^{-1} T\right) 
 \end{equation}\]</span>
 </p>
-<p>Unfortunately, I can not understand the proof of this lemma.</p>
+<p>proof: <a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
+<p>Remember that, if <span class="math inline">\(f:E→F\)</span> is a differentiable map, a way to compute <span class="math inline">\(df(a)(v)\)</span> is to find a curve <span class="math inline">\(γ:R→E\)</span> with <span class="math inline">\(γ(0)=a\)</span> and <span class="math inline">\(γ′(0)=v\)</span>, and then <span class="math inline">\(df(a)(v)=\frac{d}{dt}|_0f(γ(t))\)</span> (this is the chain rule). Here, find a curve <span class="math inline">\(γ:R→M_n(R)\)</span> with <span class="math inline">\(γ(0)=A\)</span> and <span class="math inline">\(γ′(0)=T\)</span>. Then note that</p>
+<p><span class="math display">\[\begin{equation}
+ \begin{aligned} d \operatorname{det}(A)(T)=\left.\frac{d}{d t}\right|_{0}(\operatorname{det}(\gamma(t))) &amp;=\left.\frac{d}{d t}\right|_{0}\left(\operatorname{det}\left(A A^{-1} \gamma(t)\right)\right) \\ =\left.\operatorname{det}(A) \frac{d}{d t}\right|_{0}\left(\operatorname{det}\left(A^{-1} \gamma(t)\right)\right)  &amp;=\operatorname{det}(A) d \operatorname{det}(\operatorname{I})\left(A^{-1} T\right) \end{aligned} 
+\end{equation}\]</span>
+(since <span class="math inline">\(t↦A^{−1}γ(t)\)</span> is a curve which is <span class="math inline">\(I\)</span> in 0 and which the derivative is <span class="math inline">\(A^{−1}T\)</span> in 0).</p>
 <div class="footnotes">
 <hr />
 <ol>
@@ -236,6 +241,7 @@ For an invertible matrix <span class="math inline">\(A\)</span>, we have:
 <li id="fn4"><p><a href="https://en.wikipedia.org/wiki/Jacobi%27s_formula">Jacobi’s formula</a><a href="#fnref4" class="footnote-back">↩</a></p></li>
 <li id="fn5"><p><a href="https://math.stackexchange.com/questions/2393932/lemma-for-jacobis-formula-proof">Lemma for jocobi’s formula proof</a><a href="#fnref5" class="footnote-back">↩</a></p></li>
 <li id="fn6"><p><a href="https://en.wikipedia.org/wiki/Jacobi%27s_formula">Jacobi’s formula</a><a href="#fnref6" class="footnote-back">↩</a></p></li>
+<li id="fn7"><p><a href="https://math.stackexchange.com/questions/3427241/how-to-understand-the-proof-of-lemma2-of-jacobis-formula-at-wikipedia/3427259#3427259">How to understand the proof of lemma2 of Jacobi’s formula at wikipedia</a><a href="#fnref7" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
 
